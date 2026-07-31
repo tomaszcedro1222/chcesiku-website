@@ -37,7 +37,7 @@ img { max-width: 100%; }
 }
 .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; font-size: 1.12rem; font-weight: 900; text-decoration: none; }
-.brand img { width: 44px; height: 44px; border-radius: 13px; box-shadow: 0 8px 18px rgba(18,35,59,.16); }
+.brand img { width: 50px; height: 56px; object-fit: cover; border-radius: 13px; box-shadow: 0 8px 18px rgba(18,35,59,.16); }
 .nav-links { display: flex; align-items: center; gap: 20px; font-weight: 800; font-size: .94rem; }
 .nav-links a { text-decoration: none; }
 .nav-links a:hover, .nav-links a:focus-visible { text-decoration: underline; text-underline-offset: 5px; }
