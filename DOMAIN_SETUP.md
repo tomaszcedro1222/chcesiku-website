@@ -49,7 +49,7 @@ Uwaga: domena `pluginsforlife.com` obecnie wskazuje na WordPress/Hostinger. Zmia
 
 ## Po podłączeniu domeny
 
-Zamień adresy `https://pluginsforlife.com/chcesiku/` w plikach:
+Zamień adresy `https://tomaszcedro1222.github.io/chcesiku-website/` w plikach:
 
 - `robots.txt`,
 - `sitemap.xml`,

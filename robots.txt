@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pluginsforlife.com/chcesiku/sitemap.xml
+Sitemap: https://tomaszcedro1222.github.io/chcesiku-website/sitemap.xml

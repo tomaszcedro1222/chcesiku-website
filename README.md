@@ -30,7 +30,7 @@ Strona `pluginsforlife.com` nie udostępniała pełnych danych prawnych AutoKame
 
 1. czy `Plugins for Life` jest właściwą nazwą administratora danych;
 2. czy `theseosavage@gmail.com` jest właściwym publicznym adresem wsparcia;
-3. czy strona będzie dostępna pod `https://pluginsforlife.com/chcesiku/` — jeśli nie, zmień adresy w `robots.txt`, `sitemap.xml` i metadanych;
+3. po podłączeniu własnej domeny zmień adresy GitHub Pages w `robots.txt`, `sitemap.xml` i `STORE_LISTING.md` na adres docelowy;
 4. czy produkcyjny projekt Supabase znajduje się w EOG czy poza EOG;
 5. czy usuwanie konta zostało faktycznie wdrożone w aplikacji i backendzie.
 

@@ -7,9 +7,9 @@
 - Kategoria proponowana: Nawigacja lub Podróże
 - Model: aplikacja bezpłatna, bez reklam i zakupów w aplikacji w pierwszej wersji
 - E-mail wsparcia: `theseosavage@gmail.com`
-- Strona wsparcia: `https://pluginsforlife.com/chcesiku/support.html`
-- Polityka prywatności: `https://pluginsforlife.com/chcesiku/privacy.html`
-- Usuwanie konta: `https://pluginsforlife.com/chcesiku/delete-account.html`
+- Strona wsparcia: `https://tomaszcedro1222.github.io/chcesiku-website/support.html`
+- Polityka prywatności: `https://tomaszcedro1222.github.io/chcesiku-website/privacy.html`
+- Usuwanie konta: `https://tomaszcedro1222.github.io/chcesiku-website/delete-account.html`
 
 ## Krótki opis Google Play — maks. 80 znaków
 
