@@ -22,7 +22,7 @@ Repozytorium zawiera workflow, który publikuje stronę automatycznie po każdej
 
 Jeśli folder ma pozostać we wspólnym repozytorium aplikacji, można użyć katalogu `/docs` zamiast `/website`, a następnie wskazać `/docs` w GitHub Pages.
 
-Instrukcja podłączenia domeny zewnętrznej znajduje się w `DOMAIN_SETUP.md`. Zalecany adres to `chcesiku.pluginsforlife.com`, ponieważ domena główna obecnie obsługuje WordPress.
+Instrukcja i zapis zastosowanej konfiguracji domeny `chcesiku.pl` znajdują się w `DOMAIN_SETUP.md`.
 
 ## Przed publikacją
 

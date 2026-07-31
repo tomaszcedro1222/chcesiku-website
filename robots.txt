@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tomaszcedro1222.github.io/chcesiku-website/sitemap.xml
+Sitemap: https://chcesiku.pl/sitemap.xml
