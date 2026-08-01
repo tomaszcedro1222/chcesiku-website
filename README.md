@@ -32,7 +32,7 @@ Potwierdzone dane wydawcy i administratora: `AZ Tomasz Cedro`, NIP
 1. potwierdzić, czy `theseosavage@gmail.com` jest właściwym publicznym adresem wsparcia;
 2. dopisać publiczny adres korespondencyjny i numer telefonu wymagane dla przedsiębiorcy w UE;
 3. potwierdzić, czy produkcyjny projekt Supabase znajduje się w EOG czy poza EOG;
-4. wdrożyć najnowsze migracje i funkcję usuwania konta na środowisku produkcyjnym;
+4. przed każdym wydaniem potwierdzić aktualność migracji i funkcji produkcyjnych;
 5. naprawić certyfikat HTTPS domeny i sprawdzić wszystkie publiczne adresy.
 
 Tekst polityki jest przygotowany pod aktualne funkcje projektu, ale nie zastępuje indywidualnej porady prawnej.
