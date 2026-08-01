@@ -6,7 +6,7 @@
 - Identyfikator pakietu / Bundle ID: `pl.chcesiku.chcesiku`
 - Kategoria proponowana: Nawigacja lub Podróże
 - Model: aplikacja bezpłatna, bez reklam i zakupów w aplikacji w pierwszej wersji
-- E-mail wsparcia: `login.cedrotomasz@gmail.com`
+- E-mail wsparcia: `chcesiku.cedrotomasz@gmail.com`
 - Telefon wsparcia / DSA: `+48 536 800 099`
 - Adres przedsiębiorcy: `ul. Artura Grottgera 14/1, 05-120 Legionowo, Polska`
 - Konto Apple Developer: `Individual`

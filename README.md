@@ -28,7 +28,7 @@ Instrukcja i zapis zastosowanej konfiguracji domeny `chcesiku.pl` znajdują się
 
 Potwierdzone dane wydawcy i administratora: `AZ Tomasz Cedro`, NIP
 `PL5361869704`, ul. Artura Grottgera 14/1, 05-120 Legionowo, telefon
-`+48 536 800 099`, e-mail `login.cedrotomasz@gmail.com`. Przed wysłaniem
+`+48 536 800 099`, e-mail `chcesiku.cedrotomasz@gmail.com`. Przed wysłaniem
 aplikacji trzeba jeszcze:
 
 1. potwierdzić, czy produkcyjny projekt Supabase znajduje się w EOG czy poza EOG;
