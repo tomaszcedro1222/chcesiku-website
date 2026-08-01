@@ -25,7 +25,7 @@
 >
 > Przy każdym miejscu możesz sprawdzić odległość, przewidywany czas dojścia, czystość, dostęp do wody, przewijak i aktualność informacji. Do celu poprowadzi Cię prosta strzałka albo trasa otwarta w Apple Maps lub Google Maps.
 >
-> Możesz korzystać bez konta. Po zalogowaniu możesz pomóc innym: dodać miejsce, zdjęcie, ocenę lub komentarz i zgłosić nieaktualne informacje. Nowe miejsca trafiają do moderacji.
+> Możesz korzystać bez konta. Po zalogowaniu możesz pomóc innym: dodać miejsce, zdjęcie, ocenę lub komentarz i zgłosić nieaktualne albo nieodpowiednie treści. Nowe miejsca są publikowane od razu, a obowiązek moderacji można włączyć po stronie serwera.
 >
 > Najważniejsze funkcje:
 > • wyszukiwanie najbliższych toalet,

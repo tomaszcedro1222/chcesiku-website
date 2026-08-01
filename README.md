@@ -26,13 +26,14 @@ Instrukcja i zapis zastosowanej konfiguracji domeny `chcesiku.pl` znajdują się
 
 ## Przed publikacją
 
-Strona `pluginsforlife.com` nie udostępniała pełnych danych prawnych AutoKamery. Dlatego użyto publicznej nazwy `Plugins for Life` i adresu `theseosavage@gmail.com`, widocznego w profilu autora domeny. Przed wysłaniem aplikacji potwierdź:
+Potwierdzone dane wydawcy i administratora: `AZ Tomasz Cedro`, NIP
+`PL5361869704`. Przed wysłaniem aplikacji trzeba jeszcze:
 
-1. czy `Plugins for Life` jest właściwą nazwą administratora danych;
-2. czy `theseosavage@gmail.com` jest właściwym publicznym adresem wsparcia;
-3. po podłączeniu własnej domeny zmień adresy GitHub Pages w `robots.txt`, `sitemap.xml` i `STORE_LISTING.md` na adres docelowy;
-4. czy produkcyjny projekt Supabase znajduje się w EOG czy poza EOG;
-5. czy usuwanie konta zostało faktycznie wdrożone w aplikacji i backendzie.
+1. potwierdzić, czy `theseosavage@gmail.com` jest właściwym publicznym adresem wsparcia;
+2. dopisać publiczny adres korespondencyjny i numer telefonu wymagane dla przedsiębiorcy w UE;
+3. potwierdzić, czy produkcyjny projekt Supabase znajduje się w EOG czy poza EOG;
+4. wdrożyć najnowsze migracje i funkcję usuwania konta na środowisku produkcyjnym;
+5. naprawić certyfikat HTTPS domeny i sprawdzić wszystkie publiczne adresy.
 
 Tekst polityki jest przygotowany pod aktualne funkcje projektu, ale nie zastępuje indywidualnej porady prawnej.
 
