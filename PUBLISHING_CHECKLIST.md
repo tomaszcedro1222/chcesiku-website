@@ -2,29 +2,29 @@
 
 ## Blokery wymagające poprawy w aplikacji
 
-- [ ] Działa trwałe usunięcie konta z aplikacji.
-- [ ] Backend usuwa lub anonimizuje dane i zdjęcia użytkownika.
-- [ ] Użytkownik może zgłosić komentarz, zdjęcie i inne treści.
-- [ ] Istnieje procedura moderacji i blokowania nadużyć.
-- [ ] Linki do polityki prywatności, pomocy i usuwania konta są dostępne w aplikacji.
+- [x] Działa trwałe usunięcie konta z aplikacji.
+- [x] Backend usuwa lub anonimizuje dane i zdjęcia użytkownika.
+- [x] Użytkownik może zgłosić komentarz, zdjęcie i inne treści.
+- [x] Istnieje procedura moderacji i blokowania nadużyć.
+- [x] Linki do polityki prywatności, pomocy i usuwania konta są dostępne w aplikacji.
 - [ ] Android release nie jest podpisywany kluczem debugowym.
 - [ ] Klucz Android i `key.properties` nie są zapisane w Git.
-- [ ] Wersja została ustawiona na `1.0.0+1` lub inną docelową wartość.
-- [ ] Produkcyjne reguły Supabase RLS zostały sprawdzone.
-- [ ] Klucz `service_role` nie znajduje się w aplikacji.
-- [ ] Działa reset lub odzyskanie hasła.
+- [x] Wersja została ustawiona na `1.0.0+1` lub inną docelową wartość.
+- [x] Produkcyjne reguły Supabase RLS i migracje moderacji zostały wdrożone.
+- [x] Klucz `service_role` nie znajduje się w aplikacji.
+- [ ] Zalecane: dodać pełny przepływ resetowania hasła.
 
 ## Materiały sklepowe
 
-- [ ] Ikona 1024×1024 dla Apple.
+- [x] Ikona 1024×1024 dla Apple.
 - [ ] Ikona 512×512 dla Google Play.
 - [ ] Grafika Google Play 1024×500.
 - [ ] Aktualne screeny z iPhone’a.
 - [ ] Aktualne screeny z Androida.
 - [ ] Opisy zostały sprawdzone językowo.
-- [ ] Publiczny URL polityki prywatności działa bez logowania.
-- [ ] Publiczny URL usuwania konta działa bez logowania.
-- [ ] Publiczny URL pomocy działa bez logowania.
+- [ ] Publiczny URL polityki prywatności działa po HTTPS bez błędu certyfikatu.
+- [ ] Publiczny URL usuwania konta działa po HTTPS bez błędu certyfikatu.
+- [ ] Publiczny URL pomocy działa po HTTPS bez błędu certyfikatu.
 
 ## Testy
 
@@ -42,10 +42,11 @@
 ## Apple
 
 - [ ] Aktywne członkostwo Apple Developer Program.
-- [ ] Bundle ID: `pl.chcesiku.chcesiku`.
+- [x] Bundle ID: `pl.chcesiku.chcesiku`.
 - [ ] Automatyczne podpisywanie w Xcode skonfigurowane.
 - [ ] Build przesłany do TestFlight i przetestowany.
-- [ ] App Privacy odpowiada faktycznemu przepływowi danych.
+- [x] Manifest prywatności i deklaracja szyfrowania są dodane do builda iOS.
+- [ ] Formularz App Privacy w App Store Connect odpowiada faktycznemu przepływowi danych.
 - [ ] Podano konto testowe i instrukcję dla recenzenta.
 - [ ] Uzupełniono klasyfikację wiekową i eksport szyfrowania.
 
