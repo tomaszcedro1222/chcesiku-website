@@ -27,13 +27,13 @@ Instrukcja i zapis zastosowanej konfiguracji domeny `chcesiku.pl` znajdują się
 ## Przed publikacją
 
 Potwierdzone dane wydawcy i administratora: `AZ Tomasz Cedro`, NIP
-`PL5361869704`. Przed wysłaniem aplikacji trzeba jeszcze:
+`PL5361869704`, ul. Artura Grottgera 14/1, 05-120 Legionowo, telefon
+`+48 536 800 099`, e-mail `login.cedrotomasz@gmail.com`. Przed wysłaniem
+aplikacji trzeba jeszcze:
 
-1. potwierdzić, czy `theseosavage@gmail.com` jest właściwym publicznym adresem wsparcia;
-2. dopisać publiczny adres korespondencyjny i numer telefonu wymagane dla przedsiębiorcy w UE;
-3. potwierdzić, czy produkcyjny projekt Supabase znajduje się w EOG czy poza EOG;
-4. przed każdym wydaniem potwierdzić aktualność migracji i funkcji produkcyjnych;
-5. naprawić certyfikat HTTPS domeny i sprawdzić wszystkie publiczne adresy.
+1. potwierdzić, czy produkcyjny projekt Supabase znajduje się w EOG czy poza EOG;
+2. przed każdym wydaniem potwierdzić aktualność migracji i funkcji produkcyjnych;
+3. naprawić certyfikat HTTPS domeny i sprawdzić wszystkie publiczne adresy.
 
 Tekst polityki jest przygotowany pod aktualne funkcje projektu, ale nie zastępuje indywidualnej porady prawnej.
 
