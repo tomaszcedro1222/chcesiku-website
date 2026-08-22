@@ -5,6 +5,7 @@ Gotowa statyczna strona do publikacji przez GitHub Pages. Nie wymaga Node.js, ba
 ## Zawartość
 
 - `index.html` — strona główna aplikacji,
+- `pobierz/index.html` — strona do udostępniania i pobierania aplikacji ze sklepów,
 - `privacy.html` — publiczna polityka prywatności wymagana przez App Store i Google Play,
 - `delete-account.html` — publiczna ścieżka żądania usunięcia konta wymagana przez Google Play,
 - `support.html` — pomoc i kontakt dla użytkowników oraz recenzentów sklepów,

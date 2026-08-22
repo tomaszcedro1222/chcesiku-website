@@ -43,7 +43,7 @@
       <div class="consent-inner">
         <div>
           <strong>Pomóż nam ulepszać Chcę Siku!</strong>
-          <p>Za Twoją zgodą użyjemy Google Analytics do zbiorczych statystyk odwiedzin. Bez zgody analityka nie zostanie uruchomiona. <a href="privacy.html#analityka">Dowiedz się więcej</a>.</p>
+          <p>Za Twoją zgodą użyjemy Google Analytics do zbiorczych statystyk odwiedzin. Bez zgody analityka nie zostanie uruchomiona. <a href="/privacy.html#analityka">Dowiedz się więcej</a>.</p>
         </div>
         <div class="consent-actions">
           <button type="button" class="consent-button consent-reject">Odrzucam</button>
