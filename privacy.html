@@ -15,7 +15,7 @@
     <div class="legal-layout wrap">
       <aside class="toc"><strong>Na tej stronie</strong><a href="#administrator">Administrator</a><a href="#zakres">Zakres danych</a><a href="#analityka">Licznik i analityka</a><a href="#cele">Cele i podstawy</a><a href="#odbiorcy">Odbiorcy danych</a><a href="#retencja">Przechowywanie</a><a href="#prawa">Twoje prawa</a><a href="#bezpieczenstwo">Bezpieczeństwo</a><a href="#dzieci">Dzieci</a><a href="#zmiany">Zmiany polityki</a></aside>
       <article class="legal-content">
-        <div class="notice"><strong>W skrócie:</strong> aplikacja nie sprzedaje danych, nie wyświetla reklam i nie używa danych do śledzenia reklamowego. Lokalizacja jest potrzebna do znajdowania najbliższych miejsc i nawigacji. Prosty licznik zapisuje tylko dzienną, łączną liczbę uruchomień, bez identyfikatora konta, instalacji lub urządzenia — wyłącznie po Twojej zgodzie. Bardziej szczegółowe statystyki Firebase i analityka witryny również działają wyłącznie po osobnej zgodzie.</div>
+        <div class="notice"><strong>W skrócie:</strong> aplikacja nie sprzedaje danych, nie wyświetla reklam i nie używa danych do śledzenia reklamowego. Lokalizacja jest potrzebna do znajdowania najbliższych miejsc i nawigacji. Pierwsze funkcjonalne pobranie konfiguracji zwiększa tylko dzienną, łączną sumę udanych uruchomień online, bez identyfikatora konta, instalacji lub urządzenia i bez osobnego żądania analitycznego. Bardziej szczegółowe statystyki Firebase i analityka witryny działają wyłącznie po osobnej zgodzie.</div>
 
         <h2 id="administrator">1. Administrator i kontakt</h2>
         <p>Administratorem danych przetwarzanych w związku z aplikacją mobilną „Chcę Siku!” jest <strong>AZ Tomasz Cedro</strong>, NIP: PL5361869704, ul. Artura Grottgera 14/1, 05-120 Legionowo, Polska.</p>
@@ -33,18 +33,18 @@
         <p>Usługodawcy infrastruktury mogą przetwarzać typowe dane połączenia, takie jak adres IP, kraj ustalony na poziomie sieci, znaczniki czasu, informacje o żądaniu, wersji systemu, przeglądarce lub błędzie, w zakresie potrzebnym do bezpieczeństwa, działania i diagnozowania usługi. Dotyczy to również technicznych logów Supabase i jego dostawców sieciowych.</p>
 
         <h2 id="analityka">3. Zbiorczy licznik uruchomień i analityka</h2>
-        <h3>Zbiorczy licznik uruchomień aplikacji</h3>
-        <p>Przy każdym nowym uruchomieniu procesu aplikacja podejmuje jedną próbę zwiększenia licznika. Żądanie nie zawiera identyfikatora konta, sesji, instalacji, urządzenia, identyfikatora reklamowego, lokalizacji ani historii zdarzeń. Zawiera pusty obiekt danych, wspólny publiczny klucz projektu i ogólną nazwę klienta. W naszej bazie nie powstaje wiersz pojedynczego zdarzenia: przechowujemy wyłącznie datę i łączną liczbę uruchomień w danym dniu.</p>
-        <p>Połączenie musi jednak dotrzeć przez Internet, dlatego Supabase i jego dostawcy sieciowi mogą widzieć w logach technicznych adres IP, kraj ustalony przez sieć, czas i ogólne informacje o żądaniu. Nie wykorzystujemy tych informacji do identyfikowania osób, łączenia uruchomień ani śledzenia pomiędzy aplikacjami lub usługami.</p>
-        <p>Licznik jest domyślnie wyłączony. Przed pierwszym włączeniem prosimy o zgodę i informujemy o celu oraz zakresie. Zgodę możesz wycofać, wyłączając przyszłe próby zliczania w sekcji „Analityka” w Ustawieniach aplikacji. Ponowne włączenie może policzyć bieżące uruchomienie. Wcześniejszej sumy nie można przypisać do konkretnej osoby ani z niej usunąć, ponieważ nie przechowujemy powiązania z użytkownikiem. Uruchomienia offline, niedostarczone przez sieć lub wykonane bez zgody nie są zliczane.</p>
-        <p>Podstawą pomiaru jest Twoja zgoda (art. 6 ust. 1 lit. a RODO oraz art. 399 Prawa komunikacji elektronicznej). Minimalizujemy zakres przez brak parametrów identyfikujących i natychmiastową agregację. Niezbędne logi bezpieczeństwa infrastruktury są przetwarzane w prawnie uzasadnionym interesie administratora polegającym na ochronie i diagnozowaniu usługi.</p>
+        <h3>Zbiorczy pomiar udanych uruchomień online</h3>
+        <p>Przy pierwszym wejściu do głównej części aplikacji pobieramy z naszego backendu aktualną konfigurację potrzebną do prawidłowego wyświetlania formularzy i filtrów. To samo funkcjonalne żądanie zwiększa wyłącznie dzienną, łączną sumę udanych uruchomień online. Nie wysyłamy dodatkowego żądania analitycznego.</p>
+        <p>Żądanie konfiguracji używane do agregacji nie zawiera tokenu sesji ani identyfikatora konta, instalacji, urządzenia, identyfikatora reklamowego, lokalizacji lub historii zdarzeń. Zawiera pusty obiekt danych, wspólny publiczny klucz projektu i ogólną nazwę klienta. W naszej bazie nie powstaje wiersz pojedynczego zdarzenia: przechowujemy wyłącznie datę i łączną liczbę udanych uruchomień online w danym dniu.</p>
+        <p>Połączenie musi jednak dotrzeć przez Internet, dlatego Supabase i jego dostawcy sieciowi mogą widzieć w logach technicznych adres IP, kraj ustalony przez sieć, czas i ogólne informacje o żądaniu. Są to te same techniczne dane połączenia, które towarzyszą dostarczeniu konfiguracji aplikacji. Nie wykorzystujemy ich do identyfikowania osób, łączenia uruchomień ani śledzenia pomiędzy aplikacjami lub usługami.</p>
+        <p>Podstawą przetwarzania zagregowanej sumy jest prawnie uzasadniony interes administratora (art. 6 ust. 1 lit. f RODO), polegający na pomiarze działania i wielkości wykorzystania usługi oraz planowaniu jej rozwoju. Zakres minimalizujemy przez brak identyfikatorów, brak osobnych zdarzeń i natychmiastową agregację. Uruchomienia offline, przerwane przed pobraniem konfiguracji lub niedostarczone przez sieć nie są zliczane. Możesz wnieść sprzeciw wobec przetwarzania opartego na prawnie uzasadnionym interesie, kontaktując się z administratorem.</p>
         <h3>Analityka witryny</h3>
         <p>Na stronie chcesiku.pl korzystamy z Google Analytics 4 (identyfikator pomiaru G-FXTJ25VR00) wyłącznie po uzyskaniu Twojej zgody. Bez zgody skrypt Google Analytics nie jest pobierany ani uruchamiany.</p>
         <p>Po wyrażeniu zgody Google Analytics może zbierać informacje o odwiedzanych podstronach, przybliżonej lokalizacji wynikającej z adresu IP, typie urządzenia i przeglądarki, źródle wizyty oraz interakcjach ze stroną. Dane służą do tworzenia statystyk i ulepszania witryny, a nie do wyświetlania reklam.</p>
         <p>Podstawą przetwarzania jest Twoja zgoda. Wybór zapisujemy lokalnie w przeglądarce. Możesz go w każdej chwili zmienić przyciskiem <button class="inline-settings" type="button" data-open-consent>Ustawienia prywatności</button> w stopce. Dane analityczne są przechowywane zgodnie z ustawieniami retencji usługi Google Analytics.</p>
         <h3>Opcjonalne statystyki w aplikacji</h3>
         <p>Za Twoją wyraźną zgodą aplikacja może korzystać z Google Analytics for Firebase do tworzenia ogólnych statystyk korzystania z aplikacji, takich jak wyświetlane ekrany i uruchamiane funkcje. Nie przesyłamy do tego celu treści komentarzy, zdjęć ani dokładnej lokalizacji.</p>
-        <p>Statystyki Firebase są domyślnie wyłączone. Możesz je włączyć lub wyłączyć w dowolnym czasie w Ustawieniach aplikacji, niezależnie od prostego licznika opisanego wyżej. Aplikacja nie używa obecnie reklam ani identyfikatora reklamowego. Google Analytics for Firebase może przetwarzać techniczne identyfikatory niezbędne do działania statystyk, np. identyfikator instalacji aplikacji.</p>
+        <p>Statystyki Firebase są domyślnie wyłączone. Możesz je włączyć lub wyłączyć w dowolnym czasie w Ustawieniach aplikacji. Ten wybór nie wpływa na funkcjonalne pobieranie konfiguracji i jego zbiorczy pomiar opisany wyżej. Aplikacja nie używa obecnie reklam ani identyfikatora reklamowego. Google Analytics for Firebase może przetwarzać techniczne identyfikatory niezbędne do działania statystyk, np. identyfikator instalacji aplikacji.</p>
 
         <h2 id="cele">4. Cele i podstawy przetwarzania</h2>
         <ul>
@@ -52,7 +52,7 @@
           <li><strong>Pokazywanie miejsc, odległości i nawigacji</strong> — zgoda urządzenia na dostęp do lokalizacji oraz żądanie użytkownika.</li>
           <li><strong>Publikowanie zgłoszeń, zdjęć, ocen i komentarzy</strong> — realizacja funkcji wybranej przez użytkownika.</li>
           <li><strong>Moderacja, przeciwdziałanie nadużyciom i bezpieczeństwo</strong> — prawnie uzasadniony interes administratora polegający na ochronie użytkowników i jakości danych.</li>
-          <li><strong>Zbiorczy pomiar uruchomień</strong> — zgoda użytkownika; służy pomiarowi wielkości odbiorców, ocenie działania i planowaniu rozwoju aplikacji, a przyszłe zliczanie można wyłączyć w Ustawieniach.</li>
+          <li><strong>Zbiorczy pomiar udanych uruchomień online</strong> — prawnie uzasadniony interes administratora; pomiar wykorzystania usługi odbywa się przy funkcjonalnym pobraniu konfiguracji, bez osobnego żądania analitycznego i bez identyfikatorów użytkownika.</li>
           <li><strong>Obsługa pytań, reklamacji oraz obowiązków prawnych</strong> — wykonanie umowy, obowiązek prawny lub prawnie uzasadniony interes, zależnie od sprawy.</li>
         </ul>
         <p>Dostęp do lokalizacji, aparatu i galerii jest dobrowolny i kontrolowany w ustawieniach telefonu. Odmowa może ograniczyć funkcje, które wymagają danego uprawnienia, ale podstawowe korzystanie jako gość pozostaje możliwe.</p>
@@ -60,7 +60,7 @@
         <h2 id="odbiorcy">5. Usługodawcy i inni odbiorcy</h2>
         <p>Dane mogą być przetwarzane przez dostawców usług niezbędnych do działania aplikacji:</p>
         <ul>
-          <li><strong>Supabase</strong> — uwierzytelnianie, baza danych, przechowywanie zdjęć, zagregowany licznik uruchomień, logi techniczne i infrastruktura backendowa;</li>
+          <li><strong>Supabase</strong> — uwierzytelnianie, baza danych, przechowywanie zdjęć, dostarczanie konfiguracji aplikacji, zagregowany pomiar udanych uruchomień online, logi techniczne i infrastruktura backendowa;</li>
           <li><strong>Apple</strong> i <strong>Google</strong> — dystrybucja aplikacji, bezpieczeństwo platformy oraz obsługa systemowych uprawnień;</li>
           <li><strong>Apple Maps</strong> lub <strong>Google Maps</strong> — tylko gdy użytkownik wybierze otwarcie trasy w zewnętrznej aplikacji;</li>
           <li><strong>Mapbox</strong> — dostarczanie kafelków i stylu mapy w aplikacji; podczas wyświetlania mapy Mapbox może otrzymywać typowe dane techniczne żądania, takie jak adres IP, parametry żądanych kafelków oraz publiczny token aplikacji, zgodnie z <a href="https://www.mapbox.com/legal/privacy/">polityką prywatności Mapbox</a>;</li>
@@ -77,13 +77,13 @@
           <li>treści użytkownika — do usunięcia konta, usunięcia treści, zakończenia moderacji lub utraty przydatności; publiczne dane o miejscu mogą zostać zanonimizowane i zachowane jako informacja społecznościowa;</li>
           <li>korespondencja — przez okres potrzebny do załatwienia sprawy i ochrony przed roszczeniami;</li>
           <li>dane techniczne i bezpieczeństwa — przez okres wymagany do diagnozy, zabezpieczenia usługi i realizacji obowiązków prawnych.</li>
-          <li>dzienne, zagregowane sumy uruchomień — przez okres działania produktu lub do czasu utraty przydatności; co najmniej raz w roku oceniamy dalszą potrzebę ich przechowywania; sumy nie zawierają identyfikatorów i nie pozwalają usunąć wpisu konkretnej osoby;</li>
+          <li>dzienne, zagregowane sumy udanych uruchomień online — przez okres działania produktu lub do czasu utraty przydatności; co najmniej raz w roku oceniamy dalszą potrzebę ich przechowywania; sumy nie zawierają identyfikatorów i nie pozwalają usunąć wpisu konkretnej osoby;</li>
           <li>techniczne logi dostawców infrastruktury — zgodnie z retencją właściwej usługi i planu, przez okres potrzebny do bezpieczeństwa i diagnozy;</li>
           <li>opcjonalne dane statystyczne aplikacji — zgodnie z ustawieniami retencji Google Analytics for Firebase, wyłącznie po udzieleniu zgody.</li>
         </ul>
 
         <h2 id="prawa">7. Twoje prawa</h2>
-        <p>W zależności od podstawy i okoliczności przysługuje Ci prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przeniesienia danych, wniesienia sprzeciwu i wycofania zgody. Wycofanie zgody nie wpływa na zgodność wcześniejszego przetwarzania z prawem. Zgodę na zbiorczy licznik możesz wycofać od razu, wyłączając „Zbiorczy licznik uruchomień” w Ustawieniach; możesz też skontaktować się z nami.</p>
+        <p>W zależności od podstawy i okoliczności przysługuje Ci prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przeniesienia danych, wniesienia sprzeciwu i wycofania zgody. Wycofanie zgody nie wpływa na zgodność wcześniejszego przetwarzania z prawem. Wobec przetwarzania opartego na prawnie uzasadnionym interesie możesz wnieść sprzeciw, kontaktując się z nami. Zagregowanej sumy nie można przypisać do konkretnej osoby ani usunąć z niej pojedynczego uruchomienia.</p>
         <p>Możesz również złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych. Konto możesz usunąć w aplikacji albo zgodnie z instrukcją na stronie <a href="delete-account.html">Usuwanie konta i danych</a>.</p>
 
         <h2 id="bezpieczenstwo">8. Bezpieczeństwo</h2>
