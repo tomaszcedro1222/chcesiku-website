@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#FFF719">
+  <title>Zaproszenie do Chcę Siku!</title>
+  <meta property="og:title" content="Ktoś poleca Ci Chcę Siku!">
+  <meta property="og:description" content="Znajdź najbliższą toaletę. Pobierz aplikację, a po instalacji kliknij ponownie link zaproszenia.">
+  <meta property="og:image" content="https://chcesiku.pl/assets/app-icon.png">
+  <link rel="icon" href="/assets/favicon.jpg">
+  <style>
+    :root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#12233B;background:#FAFBFD;color-scheme:light}
+    *{box-sizing:border-box}body{margin:0;padding:32px 20px}main{max-width:520px;margin:0 auto}
+    .brand{display:flex;gap:12px;align-items:center;color:inherit;text-decoration:none;font-size:20px;font-weight:800}
+    .brand img{width:44px;height:44px;border-radius:12px}h1{font-size:clamp(30px,6vw,40px);line-height:1.12;margin:36px 0 16px;letter-spacing:-1px}
+    p,li{font-size:17px;line-height:1.6}.intro{color:#707789}ol{padding-left:24px;margin:24px 0}li{padding:6px 0 6px 6px}
+    .card{background:white;border:1px solid #E5E8EF;border-radius:24px;padding:24px;margin:24px 0}
+    .stores{display:flex;gap:12px;flex-wrap:wrap}.stores a{flex:1 1 180px}.stores img{width:100%;max-width:210px;height:60px;object-fit:contain}
+    .open{display:block;border-radius:16px;background:#FFF719;color:#12233B;text-align:center;text-decoration:none;font-weight:800;padding:18px;margin-top:20px;line-height:1.4}
+    .open[hidden]{display:none}.note{font-size:14px;color:#707789}.status{font-weight:700}footer{margin-top:28px;font-size:14px;color:#707789}footer a{color:inherit}
+    a:focus-visible{outline:3px solid #2878FF;outline-offset:5px}#status:empty{display:none}
+  </style>
+  <script type="module" src="./link.mjs"></script>
+</head>
+<body>
+  <!-- No reward API or analytics runs on this page. Reward availability is
+       controlled separately by the app and its backend. -->
+  <main>
+    <a class="brand" href="/"><img src="/assets/app-icon.png" alt="">Chcę Siku!</a>
+    <h1>Ktoś poleca Ci<br>Chcę Siku!</h1>
+    <p class="intro">Znajdź najbliższą toaletę, sprawdź udogodnienia i ruszaj w drogę. Konto jest opcjonalne.</p>
+    <ol>
+      <li>Pobierz i otwórz aplikację na telefonie.</li>
+      <li>Wróć do wiadomości i kliknij ponownie ten sam link zaproszenia.</li>
+      <li>Jeśli zobaczysz tę stronę, wybierz poniżej „Otwórz aplikację i potwierdź polecenie”.</li>
+    </ol>
+    <section class="card" aria-labelledby="download-title">
+      <h2 id="download-title">Pobierz aplikację</h2>
+      <div class="stores">
+        <a href="https://apps.apple.com/pl/app/chc%C4%99-siku/id6797092985" aria-label="Pobierz w App Store"><img src="/assets/app-store-badge.svg" alt="Pobierz w App Store"></a>
+        <a href="https://play.google.com/store/apps/details?id=pl.chcesiku.chcesiku&amp;hl=pl" aria-label="Pobierz z Google Play"><img src="/assets/google-play-badge.svg" alt="Pobierz z Google Play"></a>
+      </div>
+      <a id="open-app" class="open" hidden>Otwórz aplikację<br>i potwierdź polecenie</a>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p class="note">Samo pobranie lub otwarcie tej strony nie nalicza nagrody. Polecenie potwierdzi aplikacja po połączeniu z serwerem. Jeśli przycisk nie otwiera aplikacji, upewnij się, że masz jej najnowszą wersję, i spróbuj w Safari lub Chrome.</p>
+    </section>
+    <noscript><p>Aby otworzyć zaproszenie, włącz JavaScript albo kliknij link zaproszenia na telefonie z zainstalowaną aplikacją.</p></noscript>
+    <footer><a href="/privacy.html">Polityka prywatności</a> · <a href="/support.html">Pomoc</a></footer>
+  </main>
+</body>
+</html>

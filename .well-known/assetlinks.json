@@ -1,0 +1,14 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "pl.chcesiku.chcesiku",
+      "sha256_cert_fingerprints": [
+        "2A:BB:0B:75:DA:8D:64:EA:A6:A3:1B:11:46:E0:57:6A:A0:F7:03:69:EA:99:C9:4B:67:37:7B:CE:88:DC:46:89",
+        "20:99:5F:0C:E9:F7:0A:72:B7:C1:A2:8E:C3:A0:03:AC:A0:55:61:D8:80:DC:9D:4F:30:89:6A:96:6C:E2:4F:9C",
+        "FB:0B:0C:7A:59:CA:03:CE:37:41:73:48:EC:91:7F:22:C1:A5:54:58:F7:FF:B1:04:80:54:48:4B:87:B2:71:00"
+      ]
+    }
+  }
+]

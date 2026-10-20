@@ -1,4 +1,12 @@
 {
+  "applinks": {
+    "details": [
+      {
+        "appID": "W6FJJP3JD7.pl.chcesiku.chcesiku",
+        "paths": ["/polecenie/*"]
+      }
+    ]
+  },
   "webcredentials": {
     "apps": ["W6FJJP3JD7.pl.chcesiku.chcesiku"]
   }
