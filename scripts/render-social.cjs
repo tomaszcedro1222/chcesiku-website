@@ -34,6 +34,17 @@ function artwork(key,lines,label,square){
  ${square?'<text x="600" y="1050" text-anchor="middle" fill="#536363" font-family="Arial,sans-serif" font-size="24">chcesiku.pl</text>':''}
  </svg>`;
 }
+function referralWideArtwork(){
+ return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+ <rect width="1200" height="630" fill="#fff719"/>
+ <image xlink:href="data:image/jpeg;base64,${logo}" x="30" y="18" width="535" height="594"/>
+ <path d="M606 126v378" stroke="#142b2b" stroke-opacity=".18" stroke-width="2"/>
+ <text x="650" y="244" fill="#142b2b" font-family="Arial, sans-serif" font-size="36" font-weight="600">Ktoś poleca Ci</text>
+ <text x="650" y="330" fill="#142b2b" font-family="Arial, sans-serif" font-size="71" font-weight="700" letter-spacing="-2">Chcę Siku!</text>
+ <text x="650" y="412" fill="#27634e" font-family="Arial, sans-serif" font-size="28">Najbliższa toaleta.</text>
+ <text x="650" y="452" fill="#27634e" font-family="Arial, sans-serif" font-size="28">W Twoim telefonie.</text>
+ </svg>`;
+}
 (async()=>{
  for(const [key,lines,label] of designs){
   for(const square of [false,true]){
@@ -42,5 +53,13 @@ function artwork(key,lines,label,square){
    await sharp(Buffer.from(svg)).png({compressionLevel:9}).toFile(path.join(target,name+'.png'));
   }
  }
- console.log(`Rendered ${designs.length*2} social cards (square and landscape).`);
+ await sharp(path.join(root,'assets/chce-siku-logo.jpg'))
+  .resize(1200,1200,{fit:'cover',position:'centre'})
+  .png({compressionLevel:9})
+  .toFile(path.join(target,`referral-${version}-square.png`));
+ const referralWide=referralWideArtwork();
+ fs.writeFileSync(path.join(target,`referral-${version}-wide.svg`),referralWide+'\n');
+ await sharp(Buffer.from(referralWide)).png({compressionLevel:9})
+  .toFile(path.join(target,`referral-${version}-wide.png`));
+ console.log(`Rendered ${designs.length*2+2} social cards (square and landscape).`);
 })();

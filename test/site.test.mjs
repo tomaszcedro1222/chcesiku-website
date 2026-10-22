@@ -11,7 +11,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const ORIGIN = 'https://chcesiku.pl';
 const BASELINE = 'a8d0628';
-const PROTECTED = ['polecenie', '.well-known', 'analytics.js', '404.html', 'CNAME', '.github/workflows'];
+const PROTECTED = ['polecenie/link.mjs', '.well-known', 'analytics.js', '404.html', 'CNAME', '.github/workflows'];
 const SKIP_DIRECTORIES = new Set(['.git', 'node_modules', 'test']);
 
 function filesUnder(directory) {
@@ -113,6 +113,26 @@ test('referral parser preserves valid codes and rejects malformed links without 
   assert.equal(read('polecenie/index.html').match(brand)?.[1], '/'+read('index.html').match(brand)?.[1]);
 });
 
+test('referral preview uses the brand logo without changing the referral page flow', () => {
+  const html = read('polecenie/index.html');
+  const original = execFileSync('git', ['show', `${BASELINE}:polecenie/index.html`], { cwd: ROOT, encoding: 'utf8' });
+  assert.equal(html.slice(html.indexOf('<body>')), original.slice(original.indexOf('<body>')));
+  const metas = metadata(html);
+  const image = values(metas, 'og:image')[0];
+  assert.equal(image, `${ORIGIN}/assets/social/referral-20261022-square.png`);
+  assert.equal(values(metas, 'og:image:width')[0], '1200');
+  assert.equal(values(metas, 'og:image:height')[0], '1200');
+  assert.ok(values(metas, 'og:image:alt')[0]);
+  assert.equal(values(metas, 'robots')[0], 'noindex, nofollow');
+  const square = readFileSync(localTarget(image, 'polecenie/index.html'));
+  assert.equal(square.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
+  assert.equal(square.readUInt32BE(16), 1200);
+  assert.equal(square.readUInt32BE(20), 1200);
+  const wide = readFileSync(localTarget(values(metas, 'twitter:image')[0], 'polecenie/index.html'));
+  assert.equal(wide.readUInt32BE(16), 1200);
+  assert.equal(wide.readUInt32BE(20), 630);
+});
+
 test('help and legal text are unchanged and shared shell has a single skip link', () => {
   for (const file of ['privacy.html','support.html','delete-account.html']) {
     const previous=execFileSync('git',['show',`${BASELINE}:${file}`],{cwd:ROOT,encoding:'utf8'});
@@ -210,9 +230,9 @@ test('sitemap includes home, download, guide hub and every article, but no refer
   }
 });
 
-test('referral, domain associations, analytics, 404, domain and deployment workflow are unchanged', () => {
+test('referral link code, domain associations, analytics, 404, domain and deployment workflow are unchanged', () => {
   const baselineFiles = execFileSync('git', ['ls-tree', '-r', '--name-only', BASELINE, '--', ...PROTECTED], { cwd: ROOT, encoding: 'utf8' }).trim().split('\n');
-  assert.ok(baselineFiles.length >= 8, 'Expected protected files are absent from baseline commit');
+  assert.ok(baselineFiles.length >= 7, 'Expected protected files are absent from baseline commit');
   const currentFiles = PROTECTED.flatMap(file => {
     const fullPath = path.join(ROOT, file);
     return existsSync(fullPath) && statSync(fullPath).isDirectory() ? filesUnder(fullPath).map(relative) : existsSync(fullPath) ? [file] : [];
