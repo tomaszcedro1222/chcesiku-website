@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://chcesiku.pl/</loc></url>
-  <url><loc>https://chcesiku.pl/pobierz/</loc></url>
-  <url><loc>https://chcesiku.pl/privacy.html</loc></url>
-  <url><loc>https://chcesiku.pl/delete-account.html</loc></url>
-  <url><loc>https://chcesiku.pl/support.html</loc></url>
+  <url><loc>https://chcesiku.pl/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://chcesiku.pl/pobierz/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://chcesiku.pl/poradnik/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://chcesiku.pl/poradnik/jak-korzystac-z-chce-siku/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://chcesiku.pl/poradnik/toaleta-z-przewijakiem/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://chcesiku.pl/poradnik/ibs-a-szukanie-toalety/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://chcesiku.pl/poradnik/jak-znalezc-toalete-w-podrozy/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://chcesiku.pl/poradnik/lek-przed-brakiem-toalety/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://chcesiku.pl/poradnik/toalety-dla-seniorow/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://chcesiku.pl/poradnik/toaleta-dla-osob-z-niepelnosprawnosciami/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://chcesiku.pl/poradnik/toalety-na-calym-swiecie/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://chcesiku.pl/o-poradniku/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://chcesiku.pl/privacy.html</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://chcesiku.pl/support.html</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://chcesiku.pl/delete-account.html</loc><lastmod>2026-10-22</lastmod></url>
 </urlset>

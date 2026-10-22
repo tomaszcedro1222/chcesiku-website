@@ -1,0 +1,11 @@
+{
+  "name": "chcesiku-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "build:social": "node scripts/render-social.cjs",
+    "test": "node --test test/site.test.mjs"
+  },
+  "devDependencies": { "sharp": "0.35.5" }
+}

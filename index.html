@@ -1,117 +1,78 @@
 <!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chcę Siku! — najbliższa toaleta bez stresu</title>
-  <meta name="description" content="Znajdź najbliższą toaletę, sprawdź udogodnienia i pomóż społeczności aktualizować miejsca.">
-  <meta name="theme-color" content="#FFF719">
-  <meta name="apple-itunes-app" content="app-id=6797092985">
-  <link rel="canonical" href="https://chcesiku.pl/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pl_PL">
-  <meta property="og:site_name" content="Chcę Siku!">
-  <meta property="og:url" content="https://chcesiku.pl/">
-  <meta property="og:title" content="Chcę Siku! — najbliższa toaleta bez stresu">
-  <meta property="og:description" content="Lokalizacja, udogodnienia, oceny i aktualne informacje w jednej prostej aplikacji.">
-  <meta property="og:image" content="https://chcesiku.pl/assets/og-chce-siku.png">
-  <meta property="og:image:secure_url" content="https://chcesiku.pl/assets/og-chce-siku.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Chcę Siku! — najbliższa toaleta bez stresu">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Chcę Siku! — najbliższa toaleta bez stresu">
-  <meta name="twitter:description" content="Znajdź najbliższą toaletę, sprawdź udogodnienia i dotrzyj na miejsce.">
-  <meta name="twitter:image" content="https://chcesiku.pl/assets/og-chce-siku.png">
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=20260828-2">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Najbliższa toaleta i mapa WC na świecie | Chcę Siku!</title><meta name="description" content="Znajdź najbliższą toaletę w Chcę Siku! Mapa prawie pół miliona miejsc, przewijaki, dostępność i prowadzenie. Bezpłatna aplikacja na iPhone i Android.">
+<meta name="theme-color" content="#fafbf7"><meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="apple-itunes-app" content="app-id=6797092985"><link rel="canonical" href="https://chcesiku.pl/">
+<meta property="og:type" content="website"><meta property="og:locale" content="pl_PL"><meta property="og:site_name" content="Chcę Siku!">
+<meta property="og:url" content="https://chcesiku.pl/"><meta property="og:title" content="Najbliższa toaleta i mapa WC na świecie | Chcę Siku!"><meta property="og:description" content="Znajdź najbliższą toaletę w Chcę Siku! Mapa prawie pół miliona miejsc, przewijaki, dostępność i prowadzenie. Bezpłatna aplikacja na iPhone i Android.">
+<meta property="og:image" content="https://chcesiku.pl/assets/social/home-20261022-wide.png"><meta property="og:image:secure_url" content="https://chcesiku.pl/assets/social/home-20261022-wide.png"><meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Najbliższa toaleta i mapa WC na świecie | Chcę Siku!">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Najbliższa toaleta i mapa WC na świecie | Chcę Siku!"><meta name="twitter:description" content="Znajdź najbliższą toaletę w Chcę Siku! Mapa prawie pół miliona miejsc, przewijaki, dostępność i prowadzenie. Bezpłatna aplikacja na iPhone i Android.">
+<meta name="twitter:image" content="https://chcesiku.pl/assets/social/home-20261022-wide.png"><meta name="twitter:image:alt" content="Najbliższa toaleta i mapa WC na świecie | Chcę Siku!">
+
+
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="stylesheet" href="/site.css?v=20261022-1">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://chcesiku.pl/#organization",
+      "name": "Chcę Siku!",
+      "legalName": "AZ Tomasz Cedro",
+      "url": "https://chcesiku.pl/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://chcesiku.pl/assets/app-icon.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "chcesiku.cedrotomasz@gmail.com",
+        "availableLanguage": "Polish"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://chcesiku.pl/#website",
+      "url": "https://chcesiku.pl/",
+      "name": "Chcę Siku!",
+      "inLanguage": "pl",
+      "publisher": {
+        "@id": "https://chcesiku.pl/#organization"
+      }
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://chcesiku.pl/#app",
+      "name": "Chcę Siku!",
+      "description": "Mapa najbliższych toalet z filtrami udogodnień, prowadzeniem oraz ocenami społeczności.",
+      "applicationCategory": "TravelApplication",
+      "operatingSystem": "iOS, Android",
+      "inLanguage": "pl",
+      "image": "https://chcesiku.pl/assets/app-icon.png",
+      "url": "https://chcesiku.pl/pobierz/",
+      "downloadUrl": [
+        "https://apps.apple.com/pl/app/chc%C4%99-siku/id6797092985",
+        "https://play.google.com/store/apps/details?id=pl.chcesiku.chcesiku&hl=pl"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "PLN"
+      },
+      "publisher": {
+        "@id": "https://chcesiku.pl/#organization"
+      }
+    }
+  ]
+}</script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Przejdź do treści</a>
-  <header class="site-header">
-    <nav class="nav wrap" aria-label="Główna nawigacja">
-      <a class="brand" href="index.html"><img src="assets/chce-siku-logo.jpg" alt="Logo Chcę Siku!"><span>Chcę Siku!</span></a>
-      <div class="nav-links">
-        <a href="#jak-dziala">Jak działa</a>
-        <a href="support.html">Pomoc</a>
-        <a class="nav-important" href="pobierz/">Pobierz</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="hero-grid wrap">
-        <div>
-          <span class="eyebrow">Aplikacja na iPhone’a i Androida</span>
-          <h1>Najbliższa toaleta. <span>Bez stresu.</span></h1>
-          <p class="lead">Chcę Siku! pomaga szybko znaleźć najbliższe dostępne miejsce, sprawdzić jego udogodnienia i dotrzeć do niego wtedy, kiedy liczy się każda minuta.</p>
-          <div class="store-badges home-store-badges" aria-label="Pobierz aplikację">
-            <a class="store-badge" href="https://apps.apple.com/pl/app/chc%C4%99-siku/id6797092985" aria-label="Pobierz Chcę Siku! w App Store"><img src="assets/app-store-badge.svg?v=20260828-1" alt="Pobierz w App Store" width="240" height="80"></a>
-            <a class="store-badge" href="https://play.google.com/store/apps/details?id=pl.chcesiku.chcesiku&amp;hl=pl" aria-label="Pobierz Chcę Siku! z Google Play"><img src="assets/google-play-badge.svg?v=20260828-1" alt="Pobierz z Google Play" width="270" height="80"></a>
-          </div>
-          <div class="actions">
-            <a class="button" href="#jak-dziala">Zobacz, jak działa</a>
-            <a class="button secondary" href="support.html">Potrzebuję pomocy</a>
-          </div>
-          <p class="small">Aplikacja jest dostępna bezpłatnie w App Store i Google Play.</p>
-        </div>
-        <div class="phone-card">
-          <img class="hero-app-screen" src="assets/how-it-works-1-nearby.png?v=20260828-2" alt="Lista najbliższych toalet w aplikacji Chcę Siku!" width="736" height="1600">
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="jak-dziala">
-      <div class="wrap">
-        <span class="section-kicker">Jak działa Chcę Siku!</span>
-        <h2>Cztery kroki i jesteś na miejscu.</h2>
-        <p class="section-intro">Bez zbędnych kroków i ustawień. Aplikacja od razu pokazuje najbliższe toalety, pomaga wybrać odpowiednie miejsce i płynnie prowadzi do celu.</p>
-        <div class="steps-grid">
-          <article class="step-card">
-            <div class="step-copy"><span class="number">1</span><h3>Otwórz aplikację</h3><p>Od razu zobaczysz czytelną listę najbliższych toalet, ułożoną według odległości od Ciebie.</p></div>
-            <div class="step-screen"><img src="assets/how-it-works-1-nearby.png?v=20260828-2" alt="Lista najbliższych toalet" width="736" height="1600" loading="lazy"></div>
-          </article>
-          <article class="step-card">
-            <div class="step-copy"><span class="number">2</span><h3>Wybierz toaletę</h3><p>Porównaj odległość, czas dojścia, godziny, udogodnienia i oceny. Otwórz miejsce, które najlepiej Ci odpowiada.</p></div>
-            <div class="step-screen"><img src="assets/how-it-works-2-place.png?v=20260828-2" alt="Szczegóły wybranej toalety" width="736" height="1600" loading="lazy"></div>
-          </article>
-          <article class="step-card">
-            <div class="step-copy"><span class="number">3</span><h3>Daj się poprowadzić</h3><p>Skorzystaj z wbudowanej mapy albo strzałki. Aplikacja pokaże kierunek i odległość do wybranej toalety.</p></div>
-            <div class="step-screen"><img src="assets/how-it-works-3-navigation.png?v=20260828-2" alt="Wbudowana nawigacja do toalety" width="739" height="1600" loading="lazy"></div>
-          </article>
-          <article class="step-card">
-            <div class="step-copy"><span class="number">4</span><h3>Oceń po wizycie</h3><p>Po zalogowaniu powiedz, czy miejsce istnieje i jak oceniasz jego czystość. Twoja aktualna informacja pomoże kolejnym osobom.</p></div>
-            <div class="step-screen"><img src="assets/how-it-works-4-review.png?v=20260828-2" alt="Ocena toalety po skorzystaniu" width="739" height="1600" loading="lazy"></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section yellow">
-      <div class="wrap">
-        <h2>Mapa, którą aktualizujemy razem.</h2>
-        <p class="section-intro">Możesz korzystać jako gość. Po utworzeniu konta możesz również dodawać miejsca, zdjęcia, oceny i komentarze. Zgłoszenia społeczności są publikowane od razu i mogą zostać ukryte po zgłoszeniu nadużycia.</p>
-        <div class="trust-row">
-          <article class="trust-card"><span class="trust-icon">✓</span><div><strong>Masz kontrolę nad danymi</strong><p>Konto i związane z nim dane możesz usunąć. Nie wykorzystujemy danych do reklamowego śledzenia.</p></div></article>
-          <article class="trust-card"><span class="trust-icon">OSM</span><div><strong>Otwarte dane mapowe</strong><p>Dane mapowe obejmują informacje © OpenStreetMap contributors oraz zgłoszenia społeczności.</p></div></article>
-        </div>
-        <div class="actions">
-          <a class="button" href="privacy.html">Przeczytaj politykę prywatności</a>
-          <a class="button secondary" href="delete-account.html">Usuń konto lub dane</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-grid wrap">
-      <div><strong>Chcę Siku!</strong><p class="small">Wydawca: AZ Tomasz Cedro<br>NIP: PL5361869704<br>ul. Artura Grottgera 14/1, 05-120 Legionowo<br>tel. +48 536 800 099<br>© 2026. Wszelkie prawa zastrzeżone.</p></div>
-      <div class="footer-links"><a href="pobierz/">Pobierz aplikację</a><a href="privacy.html">Polityka prywatności</a><a href="delete-account.html">Usuwanie konta</a><a href="support.html">Pomoc i kontakt</a><button class="privacy-settings" type="button" data-open-consent>Ustawienia prywatności</button></div>
-    </div>
-  </footer>
-  <script src="analytics.js" defer></script>
-</body>
-</html>
+<body><a class="skip-link" href="#main">Przejdź do treści</a><header class="site-header"><nav class="nav wrap" aria-label="Główna nawigacja"><a class="brand" href="/"><img src="assets/chce-siku-logo.jpg" alt="" width="38" height="42"><span>Chcę Siku!</span></a><div class="nav-links"><a href="/#jak-dziala">Jak działa</a><a href="/poradnik/">Poradnik</a><a class="optional-nav" href="/support.html">Pomoc</a><a class="nav-important" href="/pobierz/">Pobierz</a></div></nav></header><main id="main"><section class="hero"><div class="hero-grid wrap"><div><span class="eyebrow">Mapa toalet • iPhone i Android</span><h1>Toaleta blisko.<br><span>Więcej swobody.</span></h1><p class="lead">W swoim mieście i na drugim końcu świata. Znajdź najbliższą toaletę, sprawdź udogodnienia i daj się poprowadzić.</p><div class="store-badges" aria-label="Pobierz aplikację"><a class="store-badge" href="https://apps.apple.com/pl/app/chc%C4%99-siku/id6797092985" aria-label="Pobierz Chcę Siku! w App Store"><img src="/assets/app-store-badge.svg" alt="Pobierz w App Store" width="240" height="80"></a><a class="store-badge" href="https://play.google.com/store/apps/details?id=pl.chcesiku.chcesiku&amp;hl=pl" aria-label="Pobierz Chcę Siku! z Google Play"><img src="/assets/google-play-badge.svg" alt="Pobierz z Google Play" width="270" height="80"></a></div><p class="fine-print">Bezpłatne pobranie. Szukanie toalet bez zakładania konta.</p><a class="text-link" href="#jak-dziala">Zobacz, jak to działa <span aria-hidden="true">↘</span></a></div><figure class="map-visual"><img src="/assets/map-route.svg" alt="Prosty schemat: Twoja lokalizacja, wybór pobliskiego WC i kierunek dojścia" width="560" height="560" fetchpriority="high"><figcaption>Ilustracja poglądowa, nie mapa rzeczywistych miejsc.</figcaption></figure></div></section>
+<div class="wrap"><div class="facts"><div class="fact"><strong>Prawie 500 tys.</strong><span>miejsc w bazie z 20.10.2026</span></div><div class="fact"><strong>Także za granicą</strong><span>jedna aplikacja na kolejne wyjazdy</span></div><div class="fact"><strong>Po Twojemu</strong><span>przewijak, bezpłatność, dostępność</span></div></div></div>
+<section class="section" id="jak-dziala"><div class="wrap"><div class="section-heading"><div><span class="section-kicker">Od potrzeby do miejsca</span><h2>Prosto. Krok po kroku.</h2></div><p>Lista najbliższych toalet, czytelne szczegóły i prowadzenie w aplikacji. Wszystko w jednym miejscu.</p></div><ol class="steps"><li><h3>Otwórz aplikację</h3><p>Udostępnij lokalizację i zobacz toalety najbliżej Ciebie.</p></li><li><h3>Wybierz miejsce</h3><p>Ustaw potrzebne filtry. Sprawdź odległość, godziny i opinie.</p></li><li><h3>Daj się poprowadzić</h3><p>Naciśnij „Prowadź”. Mapa i kierunek pomogą Ci się zorientować.</p></li><li><h3>Oceń po wizycie</h3><p>Po zalogowaniu potwierdź miejsce i oceń czystość. Pomóż kolejnej osobie.</p></li></ol><a class="text-link" href="/poradnik/jak-korzystac-z-chce-siku/">Pełna instrukcja: znajdź, dodaj, oceń <span aria-hidden="true">↗</span></a></div></section>
+<section class="wrap"><div class="green-panel"><div><span class="section-kicker">Nie każdy szuka tego samego</span><h2>Najbliższa.<br>I odpowiednia dla Ciebie.</h2><p>Rodzinny spacer, podróż, codzienna droga. Wybierz potrzebne udogodnienia, a przed wyjściem sprawdź szczegóły miejsca.</p><a class="text-link" href="/poradnik/toalety-na-calym-swiecie/">Poznaj naszą mapę toalet ↗</a></div><ul class="feature-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7a8 8 0 0 1 13 5 3 3 0 0 1 0 6 8 8 0 0 1-14 0 3 3 0 0 1 0-6 8 8 0 0 1 1-5Z"/><path d="M9 3c5-2 7 3 3 4M9 14h.01M15 14h.01M9 18q3 2 6 0"/></svg><div><strong>Przewijak dla malucha</strong><p>Mniej szukania podczas rodzinnego wyjścia.</p></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="3" r="1.5"/><path d="m5 7 7 2 7-2M12 9v6m0 0-5 7m5-7 5 7"/></svg><div><strong>Informacje o dostępności</strong><p>Sprawdź oznaczenia, opis i wejście do obiektu.</p></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 4a3 3 0 0 1 0 6m3 11v-3a6 6 0 0 0-2-4"/></svg><div><strong>Wiedza od społeczności</strong><p>Oceny, zdjęcia i potwierdzenia po prawdziwych wizytach.</p></div></li></ul></div></section>
+<section class="section"><div class="wrap"><div class="section-heading"><div><span class="section-kicker">Poradnik Chcę Siku!</span><h2>Dobrze wiedzieć,<br>zanim wyjdziesz.</h2></div><p>Praktyczne odpowiedzi o szukaniu WC: z dzieckiem, w podróży i wtedy, gdy dostęp do toalety jest szczególnie ważny.</p></div><div class="article-grid"><article class="article-card"><div class="card-art" aria-hidden="true"><span>PORADNIK / 02</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7a8 8 0 0 1 13 5 3 3 0 0 1 0 6 8 8 0 0 1-14 0 3 3 0 0 1 0-6 8 8 0 0 1 1-5Z"/><path d="M9 3c5-2 7 3 3 4M9 14h.01M15 14h.01M9 18q3 2 6 0"/></svg></div><div class="card-body"><span class="category">Rodzina</span><h3><a href="/poradnik/toaleta-z-przewijakiem/">Toaleta z przewijakiem: jak znaleźć ją z dzieckiem w obcym miejscu?</a></h3><p>Praktyczny poradnik dla rodziców: gdzie szukać toalety z przewijakiem, jak użyć filtrów Chcę Siku! i co sprawdzić przed wejściem z wózkiem.</p><a class="read-link" href="/poradnik/toaleta-z-przewijakiem/" aria-label="Czytaj: Toaleta z przewijakiem: jak znaleźć ją z dzieckiem w obcym miejscu?">Przeczytaj poradnik <span aria-hidden="true">↗</span></a></div></article><article class="article-card"><div class="card-art" aria-hidden="true"><span>PORADNIK / 03</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></div><div class="card-body"><span class="category">Zdrowie i codzienność</span><h3><a href="/poradnik/ibs-a-szukanie-toalety/">IBS a szukanie toalety poza domem. Jak przygotować spokojniejsze wyjście?</a></h3><p>IBS i nagła potrzeba skorzystania z toalety: praktyczne planowanie wyjść, wybór WC w pobliżu i objawy, które warto omówić z lekarzem.</p><a class="read-link" href="/poradnik/ibs-a-szukanie-toalety/" aria-label="Czytaj: IBS a szukanie toalety poza domem. Jak przygotować spokojniejsze wyjście?">Przeczytaj poradnik <span aria-hidden="true">↗</span></a></div></article><article class="article-card"><div class="card-art" aria-hidden="true"><span>PORADNIK / 04</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div class="card-body"><span class="category">Podróże</span><h3><a href="/poradnik/jak-znalezc-toalete-w-podrozy/">Jak znaleźć toaletę w obcym mieście i za granicą?</a></h3><p>Toaleta w nieznanym miejscu: jak sprawdzić pobliskie WC, godziny, opłaty i dojście. Praktyczny poradnik na spacer, city break i podróż za granicę.</p><a class="read-link" href="/poradnik/jak-znalezc-toalete-w-podrozy/" aria-label="Czytaj: Jak znaleźć toaletę w obcym mieście i za granicą?">Przeczytaj poradnik <span aria-hidden="true">↗</span></a></div></article></div><p style="margin-top:28px"><a class="text-link" href="/poradnik/">Zobacz wszystkie 8 poradników ↗</a></p></div></section>
+<section class="section" style="padding-top:0"><div class="wrap"><div class="faq"><h2>Warto wiedzieć przed wyjściem.</h2><details><summary>Czy Chcę Siku! jest bezpłatne?</summary><p>Tak, aplikację pobierzesz bezpłatnie z App Store i Google Play. W aplikacji mogą pojawiać się reklamy.</p></details><details><summary>Czy do znalezienia toalety potrzebuję konta?</summary><p>Nie. Możesz przeglądać mapę i informacje jako gość. Konto jest potrzebne do dodawania miejsc, zdjęć i ocen.</p></details><details><summary>Czy aplikacja działa poza Polską?</summary><p>Tak. Chcę Siku! wyszukuje miejsca na podstawie lokalizacji, także za granicą. Baza obejmuje prawie pół miliona miejsc; jej kompletność różni się między regionami. <a href="/poradnik/toalety-na-calym-swiecie/">Przeczytaj o zasięgu mapy</a>.</p></details><details><summary>Czy toaleta z mapy na pewno będzie otwarta?</summary><p>Nie możemy tego zagwarantować. Sprawdź godziny, komentarze i zasady wejścia. Brak godzin oznacza brak informacji, nie całodobowy dostęp.</p></details><details><summary>Jak znaleźć toaletę z przewijakiem?</summary><p>Zaznacz filtr „Przewijak”, otwórz szczegóły najbliższego pasującego miejsca i sprawdź dostęp. Osobno upewnij się, że dojdziesz tam z wózkiem. <a href="/poradnik/toaleta-z-przewijakiem/">Zobacz poradnik dla rodziców</a>.</p></details></div></div></section><section class="wrap" style="padding-bottom:80px"><div class="cta"><div><h2>Miej najbliższe WC pod ręką.</h2><p>Pobierz Chcę Siku! Sprawdź udogodnienia, wybierz miejsce i daj się poprowadzić.</p></div><div class="store-badges" aria-label="Pobierz aplikację"><a class="store-badge" href="https://apps.apple.com/pl/app/chc%C4%99-siku/id6797092985" aria-label="Pobierz Chcę Siku! w App Store"><img src="/assets/app-store-badge.svg" alt="Pobierz w App Store" width="240" height="80"></a><a class="store-badge" href="https://play.google.com/store/apps/details?id=pl.chcesiku.chcesiku&amp;hl=pl" aria-label="Pobierz Chcę Siku! z Google Play"><img src="/assets/google-play-badge.svg" alt="Pobierz z Google Play" width="270" height="80"></a></div></div></section></main><footer class="site-footer"><div class="wrap"><div class="footer-grid"><div><strong>Chcę Siku!</strong><p>Więcej swobody poza domem.<br>Mapa toalet tworzona z udziałem społeczności.</p><p>Wydawca: AZ Tomasz Cedro<br>NIP: PL5361869704<br>ul. Artura Grottgera 14/1, 05-120 Legionowo<br>tel. <a href="tel:+48536800099">+48 536 800 099</a></p></div><div class="footer-links"><a href="/">Strona główna</a><a href="/pobierz/">Pobierz aplikację</a><a href="/poradnik/">Poradnik</a><a href="/o-poradniku/">O poradniku i źródłach</a><a href="/support.html">Pomoc i kontakt</a></div><div class="footer-links"><a href="/privacy.html">Polityka prywatności</a><a href="/delete-account.html">Usuwanie konta</a><button class="privacy-settings" type="button" data-open-consent>Ustawienia prywatności</button><a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a></div></div><div class="footer-bottom">© 2026 Chcę Siku! Informacje o miejscach mogą wymagać aktualizacji. Sprawdź zasady dostępu na miejscu.</div></div></footer><script src="/analytics.js" defer></script></body></html>
