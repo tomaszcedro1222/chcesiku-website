@@ -45,7 +45,7 @@
     banner.innerHTML = `
       <div class="consent-inner">
         <div>
-          <strong>${english ? "Help us improve Chcę Siku!" : "Pomóż nam ulepszać Chcę Siku!"}</strong>
+          <strong>${english ? "Help us improve Gotta Pee!" : "Pomóż nam ulepszać Chcę Siku!"}</strong>
           <p>${english ? 'With your permission, we use Google Analytics for aggregate visit statistics. Analytics stays off unless you agree. <a href="/en/privacy/#analityka">Learn more</a>.' : 'Za Twoją zgodą użyjemy Google Analytics do zbiorczych statystyk odwiedzin. Bez zgody analityka nie zostanie uruchomiona. <a href="/privacy.html#analityka">Dowiedz się więcej</a>.'}</p>
         </div>
         <div class="consent-actions">
