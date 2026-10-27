@@ -94,3 +94,4 @@ for(const name of ['privacy.html','support.html','delete-account.html']){
 const urls=['/','/pobierz/','/poradnik/',...articles.map(artUrl),'/o-poradniku/','/privacy.html','/support.html','/delete-account.html'];
 save('sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(p=>`  <url><loc>${base+p}</loc><lastmod>${date}</lastmod></url>`).join('\n')}\n</urlset>`);
 console.log(`Built ${articles.length} articles, home, download, guide, editorial page and sitemap. Referral files untouched.`);
+await import('./build-english.mjs');

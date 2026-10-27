@@ -1287,3 +1287,36 @@ a,button {
     scroll-behavior:auto
   }
 }
+.language-switch {
+  border-left:1px solid var(--line);
+  padding-left:16px;
+  white-space:nowrap;
+  font-size:.8rem;
+  letter-spacing:.02em;
+}
+.language-name { display:none }
+.app-language-note {
+  max-width:48ch;
+  color:var(--muted);
+  font-size:.84rem;
+  line-height:1.6;
+  margin:16px 0 22px;
+}
+.download-panel .app-language-note { margin:18px auto 0 }
+.share-guide { padding-top:24px; border-top:1px solid var(--line); margin-top:32px }
+.share-guide .button { cursor:pointer }
+.share-guide [data-share-status] { margin:12px 0 0; overflow-wrap:anywhere }
+@media(min-width:900px) { .language-name { display:inline } }
+@media(max-width:640px) {
+  .nav-links .how-nav { display:none }
+  .language-switch { padding-left:10px }
+}
+@media(max-width:380px) {
+  .nav-links { gap:9px }
+  .brand { flex-shrink:0 }
+  .brand span { font-size:.9rem }
+  .nav-links a { font-size:.76rem }
+  .nav-links .nav-important { padding:8px 9px }
+  .hero h1 { font-size:2.2rem }
+  .hero .store-badge img { height:40px }
+}

@@ -2,6 +2,18 @@
 
 Statyczna strona publikowana przez istniejący GitHub Pages. Na serwerze nie wymaga Node.js ani bazy danych. Wygenerowane pliki HTML i PNG są zapisane w repozytorium; workflow publikuje je bez dodatkowego budowania.
 
+## Wersja angielska (27.10.2026)
+
+- `/en/`, `/en/download/`, `/en/guides/` i 9 poradników, w tym oryginalny przewodnik dla odwiedzających Polskę.
+- `content/articles.en-practical.json`, `content/articles.en-health.json` i `content/pages.en-legal.json` są źródłami angielskich treści. Polskie treści pozostają w dotychczasowych plikach.
+- `scripts/build-site.mjs` uruchamia również `scripts/build-english.mjs`: powstaje 16 stron angielskich, wzajemne `hreflang` PL/EN i przełączniki prowadzące do odpowiednika artykułu. Każdy język ma własny canonical. Nie ma przekierowań według IP ani języka przeglądarki.
+- `sitemap.xml` obejmuje 31 stron, bez linków poleceń. `/en/feed.xml` udostępnia angielskie poradniki jako RSS.
+- `npm run build:social:en` tworzy angielskie grafiki 1:1 i 1200:630. Osobny generator nie nadpisuje polskich grafik ani podglądu poleceń.
+- Angielska witryna jasno informuje, że interfejs aplikacji jest obecnie polski. Instrukcje tłumaczą znaczenie istniejących etykiet.
+- `analytics.js` zachowuje usługę `G-FXTJ25VR00` i klucz zgody. Dodaje angielską treść zgody, parametr `site_language` oraz zdarzenie `app_store_click` (parametry `store`, `site_language`, `page_path`) wyłącznie po zgodzie. To kliknięcie do sklepu, nie instalacja. Na localhost analityka nie jest wysyłana. Raporty według `/en/` nie wymagają rejestracji wymiaru niestandardowego; dla raportowania `site_language` jako wymiaru w GA4 trzeba go osobno zarejestrować.
+
+Po publikacji: zweryfikuj publiczne `/en/`, `/en/download/`, artykuł i sitemapę; zgłoś zaktualizowaną mapę witryny w istniejącej usłudze Search Console. Oceniaj osobno wyświetlenia/kliknięcia `/en/`, kraje, zapytania niezwiązane z marką oraz kliknięcia do sklepów. Samo dodanie tłumaczeń nie gwarantuje ruchu ani cytowań AI. Nie dodajemy masowych stron miast, fikcyjnych ocen, ukrytego tekstu ani specjalnych plików obiecujących ranking w AI.
+
 ## Edycja i weryfikacja strony (22.10.2026)
 
 - `content/articles.json` - źródło ośmiu poradników. Każdy zawiera opis, datę, sekcje i źródła.
@@ -11,7 +23,7 @@ Statyczna strona publikowana przez istniejący GitHub Pages. Na serwerze nie wym
 
 Po zmianie treści uruchom `npm run build`, a następnie `npm test` (Node.js 20+). Po zmianie grafik zainstaluj zależności przez `npm install` i uruchom `npm run build:social`. Zapisz w commicie źródła i wygenerowane wyniki. Przy kolejnych zmianach ustaw rzeczywistą datę aktualizacji oraz nową wersję URL grafiki, aby nie korzystać ze starej kopii podglądu w komunikatorach.
 
-Testy chronią `polecenie/`, `.well-known/`, `analytics.js`, `404.html`, CNAME i workflow względem produkcyjnego commitu `a8d0628`. Nie aktualizuj tego punktu odniesienia bez osobnego audytu tych funkcji. Zmiany treści prawnych wymagają osobnego zakresu - generator aktualizuje tam tylko wspólny nagłówek, stopkę i styl.
+Testy chronią `polecenie/`, `.well-known/`, `404.html`, CNAME i workflow względem produkcyjnego commitu `a8d0628`. Nie aktualizuj tego punktu odniesienia bez osobnego audytu tych funkcji. Zachowanie Analytics po lokalizacji chronią osobne testy zgody, języka i izolacji podglądu. Generator zachowuje polskie treści prawne; angielskie wersje są tłumaczeniami tych samych zasad.
 
 Treść dla Google i wyszukiwarek AI znajduje się bezpośrednio w HTML. Artykuły mają canonicale, dane BlogPosting/BreadcrumbList, źródła, daty i linki tematyczne. Sitemap jest w `sitemap.xml`, a robots.txt dopuszcza indeksowanie. Strony poleceń celowo pozostają `noindex`. Nie ma mechanizmu gwarantującego indeksację, ranking ani cytowanie przez model.
 

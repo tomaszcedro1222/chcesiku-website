@@ -1,0 +1,206 @@
+[
+  {
+    "slug": "how-to-use-chce-siku",
+    "plSlug": "jak-korzystac-z-chce-siku",
+    "socialKey": "article-1",
+    "medical": false,
+    "title": "How to use Chcę Siku! to find, add and review a toilet",
+    "description": "Find a nearby toilet, choose facilities, follow the map and share a review. An English guide to the Polish buttons in the Chcę Siku! app.",
+    "category": "App guide",
+    "author": "Chcę Siku! editorial team",
+    "date": "2026-10-27",
+    "lead": "Open Chcę Siku!, choose the facilities you need and select a suitable nearby toilet. Tap Prowadź for map and compass guidance. After your visit, leave a review or add a missing place. The app currently uses Polish labels; this guide explains the buttons in English so you can recognise them on your phone.",
+    "sections": [
+      {
+        "heading": "1. Open the app and find nearby toilets",
+        "html": "<p>Allow Chcę Siku! to use your phone's location. The <strong>Najbliżej Ciebie</strong> section means <em>Nearest to you</em> and lists places by distance. You can browse the map and place information without an account. If the position is missing or inaccurate, check the app's location permission and your phone's location settings.</p><p>Each place card can show distance, a cleanliness rating and facilities recorded for that location. Tap <strong>Mapa</strong> to see the map, or open a place to read its description, comments and available photos. Check the entrance as well as the pin: a toilet on the other side of a railway line may take longer to reach than its distance suggests.</p>"
+      },
+      {
+        "heading": "2. Choose the facilities you need",
+        "html": "<p>The filters use these Polish labels:</p><ul><li><strong>Bezpłatna:</strong> free to use.</li><li><strong>Woda:</strong> water available, useful when checking handwashing facilities. This is not a drinking-water certification.</li><li><strong>Przewijak:</strong> baby changing table.</li><li><strong>Dla osób z niepełnosprawnościami:</strong> marked as accessible for disabled people.</li><li><strong>Parking:</strong> parking recorded at the location.</li><li><strong>Prysznic:</strong> shower recorded at the location.</li></ul><p>When you select several filters, results must match all of them. If the closest result is far away, try removing a non-essential filter. An unmarked facility may simply be missing from the record. Keep any feature essential to your access requirements and confirm details with the venue where necessary.</p><p>Check opening hours and any possible-closure warning. Unknown hours do not mean 24-hour access. The app's indication that a place exists is separate from its cleanliness rating.</p>"
+      },
+      {
+        "heading": "3. Use Prowadź to orient yourself",
+        "html": "<p>In the place details, <strong>Prowadź</strong> opens guidance inside Chcę Siku! You can use a map view or an arrow showing the direction of your destination. The distance and estimated time help you orient yourself, but the arrow does not check every crossing, locked gate or other obstacle. Follow safe, permitted paths and look for the actual entrance.</p><p>For a walking route along streets, select <strong>Otwórz w mapach</strong>, meaning <em>Open in maps</em>. You can pass the destination to Google Maps, or to Apple Maps on supported devices. The in-app direction arrow should not be mistaken for turn-by-turn street navigation.</p>"
+      },
+      {
+        "heading": "4. Leave a review after your visit",
+        "html": "<p>Sign in, open the place and choose <strong>Po wizycie - oceń miejscówkę</strong>, the review option after a visit. The guidance map also offers <strong>Oceń toaletę</strong>, meaning <em>Rate the toilet</em>. Answer <strong>Czy to miejsce istnieje?</strong> (<em>Does this place exist?</em>) and rate its cleanliness.</p><p>Choose <strong>Chcę podać szczegóły</strong> (<em>I want to provide details</em>) to contribute information about facilities, whether it is free, its name or opening hours. Only mark <strong>TAK</strong> (<em>Yes</em>) or <strong>NIE</strong> (<em>No</em>) for facts you checked. Then tap <strong>Zapisz ocenę</strong> (<em>Save review</em>).</p><p>If the toilet genuinely no longer exists, the form offers <strong>Zgłoś brak miejsca</strong> to report it missing. A toilet that is closed at night still exists: update its hours or leave a clear comment instead.</p>"
+      },
+      {
+        "heading": "5. Add a toilet that is missing from the map",
+        "html": "<p>First check nearby pins to avoid adding the same toilet twice. Sign in and tap <strong>Dodaj</strong> (<em>Add</em>) at the bottom of the screen. In the <strong>Dodaj miejsce</strong> form:</p><ol><li>Enter a place name, choose its type and describe how to find the entrance.</li><li>Record cleanliness and the facilities you have confirmed. Add whether it is free if you know.</li><li>Enter opening hours, or choose <strong>Nie znam godzin otwarcia</strong> (<em>I do not know the opening hours</em>).</li><li>Move the map so the pin marks the toilet's actual position.</li><li>Add a photo if you can do so without photographing other users or private information.</li><li>Confirm that the place is safe and legally accessible, then tap <strong>Zapisz</strong> (<em>Save</em>).</li></ol><p>Do not add private property as a public facility or assume that permission to enter is automatic. If the app says a submission is waiting to be sent, check its status when you have a connection again.</p>"
+      },
+      {
+        "heading": "Make your contribution useful to the next person",
+        "html": "<p>A short, specific note is often enough: <em>Entrance beside the car park</em>, <em>Ask staff for the key</em> or <em>Changing table in a separate family room</em>. Describe what you observed and, where helpful, when you visited. Do not guess about facilities you did not inspect.</p><p><a href=\"/en/download/\">Download Chcę Siku! for iPhone or Android</a> and try the steps in a familiar area before a trip. For planning a visit somewhere new, read our guide to <a href=\"/en/guides/finding-toilets-while-travelling/\">finding toilets while travelling</a>. The button names above were checked against the app source in October 2026.</p>"
+      }
+    ],
+    "sources": []
+  },
+  {
+    "slug": "toilets-with-baby-changing-facilities",
+    "plSlug": "toaleta-z-przewijakiem",
+    "socialKey": "article-2",
+    "medical": false,
+    "title": "How to find toilets with baby changing facilities",
+    "description": "Find a toilet with a baby changing table, check access with a pushchair and plan a family stop in an unfamiliar place using Chcę Siku!.",
+    "category": "Family outings",
+    "author": "Chcę Siku! editorial team",
+    "date": "2026-10-27",
+    "lead": "The nearest toilet may not have a baby changing table. In Chcę Siku!, select Przewijak, the Polish label for baby changing, then compare nearby results and check their details. If you have a pushchair or stroller, also check the entrance and space inside. A changing-table label does not confirm step-free access.",
+    "sections": [
+      {
+        "heading": "A changing table, a sink and a suitable entrance are separate needs",
+        "html": "<p>A baby changing label tells you that a changing facility is recorded for a place. It does not automatically mean there is a separate family room, space for a pushchair or an entrance without steps. Read the description and look at available photos before choosing where to go.</p><p>For a parent or carer with a baby, water for washing hands and a clear description of the entrance may matter as much as distance. With an older child, an ordinary toilet on the ground floor might meet the immediate need. Choose the facilities that matter for this visit rather than selecting every filter.</p>"
+      },
+      {
+        "heading": "Search for a baby changing table in Chcę Siku!",
+        "html": "<ol><li>Open the app and allow it to locate your phone.</li><li>Select <strong>Przewijak</strong>, meaning <em>Baby changing table</em>. The app currently uses Polish labels.</li><li>If needed, also select <strong>Woda</strong> for water or <strong>Bezpłatna</strong> for free facilities.</li><li>Compare the closest results and open their details: entrance description, photos, comments and known opening hours.</li><li>Tap <strong>Prowadź</strong> for the in-app map and direction arrow.</li></ol><p>Several selected filters are combined: a place must match all of them to appear. If the nearest result is far away, remove a less important condition and compare the options. No matching record does not prove that there is no changing table nearby; the information may not have been added yet.</p>"
+      },
+      {
+        "heading": "Ask specific questions when the listing is incomplete",
+        "html": "<p>Ask staff whether they have a baby changing table, where it is and whether you can reach it with a pushchair. Check who can enter the room: a changing table inside one set of toilets is not the same as a family room available to every parent or carer. You may also need to ask for a key.</p><p>If the room is upstairs, ask about the lift and whether it is working. At an airport, station or attraction, find out whether the facility is before or after a ticket barrier or security check. A nearby map pin cannot tell you that you are allowed into that part of the building.</p>"
+      },
+      {
+        "heading": "Plan a stop that fits your outing",
+        "html": "<p>Before a long walk in an unfamiliar city, check a suitable toilet near your first destination or planned break. If you are driving, look for parking information and confirm the route from the car to the entrance. Have another option in mind when a listing has little detail or uncertain hours.</p><p>A slightly more distant toilet with easy access may be more practical than one reached by stairs. Chcę Siku!'s direction arrow helps with orientation, but it does not verify a pushchair-friendly route. Look out for crossings, kerbs, steps and temporary works.</p><p>For more on planning stops in a new place, read <a href=\"/en/guides/finding-toilets-while-travelling/\">our travel toilet guide</a>. If anyone in your group has specific access needs, our guide to <a href=\"/en/guides/finding-accessible-toilets/\">finding an accessible toilet</a> covers questions about the route and room.</p>"
+      },
+      {
+        "heading": "What if you cannot find a listed changing facility?",
+        "html": "<p>Ask at the venue's information desk, a tourist information point or another staffed location nearby. Say that you need a <em>baby changing table</em>, not simply a bathroom. This helps avoid being directed to a room that does not meet your needs. Confirm any conditions of entry.</p><p>On arrival, check the equipment and follow its instructions. If the changing table is damaged or cannot be used safely, tell the staff. A community map entry is not a live inspection of the equipment.</p><p>A baby changing table is also different from an adult changing bench or a fully equipped Changing Places toilet. Do not rely on the baby changing filter for those needs; confirm the exact equipment with the venue.</p>"
+      },
+      {
+        "heading": "Share a useful update for the next family",
+        "html": "<p>After your visit, sign in and review the place. Select <strong>Chcę podać szczegóły</strong> (<em>I want to provide details</em>) to confirm the changing table and any other features you checked. A comment about the floor, entrance, key or availability to different carers can save someone an unnecessary search.</p><p>A photo of the sign or an empty room can help if you can take it without compromising anyone's privacy. If the toilet is missing from the map, you can add it after signing in. Our <a href=\"/en/guides/how-to-use-chce-siku/\">step-by-step app guide</a> explains how. <a href=\"/en/download/\">Download Chcę Siku!</a> before your next family outing.</p>"
+      }
+    ],
+    "sources": []
+  },
+  {
+    "slug": "finding-toilets-while-travelling",
+    "plSlug": "jak-znalezc-toalete-w-podrozy",
+    "socialKey": "article-4",
+    "medical": false,
+    "title": "How to find a public toilet while travelling",
+    "description": "Find a nearby restroom in an unfamiliar city: check opening hours, fees, facilities and the entrance, then plan your way there with Chcę Siku!.",
+    "category": "Travel",
+    "author": "Chcę Siku! editorial team",
+    "date": "2026-10-27",
+    "lead": "To find a toilet in an unfamiliar city, start with your current location, choose the facilities you need and check the access details before setting off. Chcę Siku! shows nearby toilet locations in Poland and abroad. Coverage and information vary by area, so keep a second option in mind when a listing is incomplete.",
+    "sections": [
+      {
+        "heading": "Start with where you actually are",
+        "html": "<p>After leaving a station or arriving in a new neighbourhood, it is easy to misjudge which side of a road you are on. Open Chcę Siku! and allow it to establish your phone's location. <strong>Najbliżej Ciebie</strong>, meaning <em>Nearest to you</em>, lists places by distance. If the location is still approximate, give the phone time to refine it.</p><p>Open the details and look at the map before choosing the closest pin. A toilet across railway tracks, on another floor or inside a building with an entrance on the next street can take longer to reach. The displayed distance is not a promise about the length of a usable walking route.</p>"
+      },
+      {
+        "heading": "Check access, hours, cost and recent information",
+        "html": "<ul><li><strong>Access:</strong> is this a public toilet, or a facility inside a business with entry conditions?</li><li><strong>Hours:</strong> are opening hours available, and is there a warning that the place may be closed?</li><li><strong>Cost:</strong> is the toilet marked as free, or do you need to check a fee and payment method?</li><li><strong>Information:</strong> what do the description, photos, comments and community confirmations tell you?</li></ul><p>Missing opening hours mean that the hours are unknown, not that the toilet is open all night. If a toilet is inside a restaurant, museum or other venue, ask staff about access. A listing on a map is not permission to enter a private area.</p>"
+      },
+      {
+        "heading": "Use filters without ruling out useful options by accident",
+        "html": "<p>The app's Polish filters include <strong>Bezpłatna</strong> (<em>Free</em>), <strong>Przewijak</strong> (<em>Baby changing</em>), <strong>Woda</strong> (<em>Water</em>) and <strong>Dla osób z niepełnosprawnościami</strong> (<em>Accessible for disabled people</em>). Parking and shower filters are also available. The <a href=\"/en/guides/how-to-use-chce-siku/\">English app guide</a> explains the labels and controls.</p><p>Results must match all selected filters. If every result is far away, a missing facility label may be narrowing the search. Try removing a condition that is optional for you. Keep requirements that are essential to using the toilet and ask the venue for details if the listing does not answer your questions.</p>"
+      },
+      {
+        "heading": "Follow the map and check the real route",
+        "html": "<p><strong>Prowadź</strong> opens the app's map and direction-arrow views. The arrow points towards the destination; it does not plan a safe passage through every obstacle. Use pedestrian crossings and permitted entrances, even if the arrow appears to point directly across a road or courtyard.</p><p>For a street-based walking route, choose <strong>Otwórz w mapach</strong> (<em>Open in maps</em>) in the place details. This can open the destination in Google Maps or, on supported devices, Apple Maps. Check the last part of the route carefully because the toilet entrance may be inside the building.</p>"
+      },
+      {
+        "heading": "Prepare for limited data or an unavailable toilet",
+        "html": "<p>Before travel, check your mobile data arrangements, location permissions and battery. Do not assume the map and all place details will be available offline. Keeping a note or screenshot of an address and entrance description gives you something to refer to if your connection drops; it does not confirm the facility will be open.</p><p>If a toilet is closed, return to the list and consider another place. A tourist information desk or staff at a nearby venue may have more current local information. Ask about the feature you need, such as step-free access or a changing table, as well as the location.</p><p>When you update the app later, distinguish a closed toilet from one that no longer exists. Use hours or a comment for a temporary closure. Report a missing place only when the location really has gone.</p>"
+      },
+      {
+        "heading": "A short checklist before sightseeing",
+        "html": "<p>Choose a suitable toilet near your destination, check the entrance and hours, and keep the venue's name handy. Allow enough time to reach it at your own pace. If you are travelling with a baby, check our guide to <a href=\"/en/guides/toilets-with-baby-changing-facilities/\">toilets with changing tables</a>; if Poland is your destination, use our <a href=\"/en/guides/public-toilets-in-poland/\">visitor's guide to public toilets in Poland</a>.</p><p><a href=\"/en/download/\">Download Chcę Siku!</a> before your trip and try a search in a familiar area. After using a new place, a short factual review helps the next visitor judge whether it is suitable for them.</p>"
+      }
+    ],
+    "sources": []
+  },
+  {
+    "slug": "worldwide-toilet-map",
+    "plSlug": "toalety-na-calym-swiecie",
+    "socialKey": "article-8",
+    "medical": false,
+    "title": "A worldwide toilet map with nearly half a million locations",
+    "description": "Chcę Siku! helps you find toilets in Poland and abroad. Learn what nearly half a million map records mean and how to check a place before visiting.",
+    "category": "About the app",
+    "author": "Chcę Siku! editorial team",
+    "date": "2026-10-27",
+    "lead": "Chcę Siku! helps people find toilets in Poland and around the world. Our database snapshot from 20 October 2026 contained 496,888 locations, nearly half a million records. This describes the size of the database on that date, not the number of verified, free or currently open toilets. Coverage and information differ between areas.",
+    "sections": [
+      {
+        "heading": "What does nearly half a million locations mean?",
+        "html": "<p>The figure of <strong>496,888</strong> counts location records in Chcę Siku!'s database as recorded on <strong>20 October 2026</strong>. Some have photos, hours and reviews; others have limited information and need confirmation. The total changes as records are added, updated and cleaned up.</p><p>A large database can help you discover options in a new place. It does not mean that every toilet has been inspected recently, that every neighbourhood has complete coverage or that each listed place is open to everyone at any time. Read the details for the specific toilet you intend to use.</p>"
+      },
+      {
+        "heading": "Does Chcę Siku! work outside Poland?",
+        "html": "<p>Yes. The search uses your phone's location and is not restricted to Poland. Once the app establishes your position, it can show nearby matching records abroad as well as at home. The same map can be useful on a daily walk, a business trip or a holiday.</p><p>Global coverage does not mean equal coverage everywhere. One area may have many detailed entries while another has few or outdated records. Check the actual distance: the nearest matching record in the database may still be far away.</p><p>The app currently has a Polish interface. Our <a href=\"/en/guides/how-to-use-chce-siku/\">English guide to using Chcę Siku!</a> translates the main labels and explains the steps. An English website does not change the language shown inside the app.</p>"
+      },
+      {
+        "heading": "One map, different practical needs",
+        "html": "<p>The nearest restroom is not always the one that meets your needs. You might be looking for a baby changing table, water to wash your hands, a free toilet or a place with suitable access. Filters let you search for the facilities recorded for each location. Parking and showers are also among the available options.</p><p>Selecting several filters can leave fewer, more distant results because a place must meet every selected condition. Missing information about a facility is not proof that the facility is absent. If a particular feature is essential, confirm it with the venue rather than relying on a general label.</p><p>For more detailed planning, see our guides to <a href=\"/en/guides/finding-accessible-toilets/\">accessible toilets</a> and <a href=\"/en/guides/toilets-with-baby-changing-facilities/\">baby changing facilities</a>.</p>"
+      },
+      {
+        "heading": "From a map pin to the entrance",
+        "html": "<p>Open a place to review the available description, cleanliness rating, facilities and information about whether it exists. The <strong>Prowadź</strong> button opens in-app map and compass guidance. For a walking route in a separate maps app, use <strong>Otwórz w mapach</strong>.</p><p>A direction arrow and a straight-line distance cannot account for every bridge, locked gate or entrance on another street. Confirm that the route is usable and that you can enter the venue. Plan for an internet connection; do not assume that every map and record will remain available offline.</p>"
+      },
+      {
+        "heading": "Why a single review helps",
+        "html": "<p>A map becomes more useful when the record matches what visitors find. After using a toilet, you can confirm that it exists, rate cleanliness, update facilities and hours or report a location that has disappeared. A practical comment such as <em>Ask reception for the key</em> can make the final few metres easier.</p><p>Browsing the map does not require an account. Adding places, photos and reviews requires signing in. Contribute what you have checked directly and leave unknown details unknown. A small accurate update is more useful than a complete-looking record based on guesses.</p>"
+      },
+      {
+        "heading": "Start with the place you are visiting next",
+        "html": "<p><a href=\"/en/download/\">Download Chcę Siku! for iPhone or Android</a>, allow location access and compare nearby toilets. Choose the filters that matter to you, then review access and opening information before setting off. The app can support your planning, but cannot guarantee access to a particular venue.</p><p>The database total in this guide comes from our 20 October 2026 snapshot. Check individual records in the app for their available information. Our guide to <a href=\"/en/guides/finding-toilets-while-travelling/\">finding toilets while travelling</a> explains how to prepare for a visit somewhere unfamiliar.</p>"
+      }
+    ],
+    "sources": []
+  },
+  {
+    "slug": "public-toilets-in-poland",
+    "plSlug": null,
+    "socialKey": "article-9",
+    "medical": false,
+    "title": "Public toilets in Poland: a practical guide for visitors",
+    "description": "Find a public toilet in Poland, understand Polish WC signs and app filters, ask about fees and check baby changing or accessible facilities.",
+    "category": "Visiting Poland",
+    "author": "Chcę Siku! editorial team",
+    "date": "2026-10-27",
+    "lead": "When you need a public toilet in Poland, look for WC or toaleta, check nearby map listings and confirm the entrance, hours and any fee. Chcę Siku! can help you search from your phone's location. Its interface is currently Polish, so the phrases and filter translations below are useful for visitors who do not speak Polish.",
+    "sections": [
+      {
+        "heading": "Useful Polish words for finding a toilet",
+        "html": "<p><strong>Toaleta</strong> means <em>toilet</em> or <em>restroom</em>; <strong>toalety</strong> is the plural. <strong>WC</strong> is another useful label to look for. If you need to ask someone, you can show them one of these phrases on your phone:</p><ul><li><strong>Gdzie jest najbliższa toaleta?</strong> - Where is the nearest toilet?</li><li><strong>Czy mogę skorzystać z toalety?</strong> - May I use the toilet?</li><li><strong>Czy toaleta jest bezpłatna?</strong> - Is the toilet free to use?</li><li><strong>Czy można płacić kartą?</strong> - Can I pay by card?</li><li><strong>Czy jest przewijak?</strong> - Is there a baby changing table?</li><li><strong>Czy do toalety można wejść bez schodów?</strong> - Can I reach the toilet without stairs?</li></ul><p>When asking for a bathroom, naming the feature you need can prevent a second trip. A baby changing table, step-free entrance and a standard toilet are different requests.</p>"
+      },
+      {
+        "heading": "How to search nearby in Chcę Siku!",
+        "html": "<p>Open the app, allow location access and look at <strong>Najbliżej Ciebie</strong> (<em>Nearest to you</em>). You can browse places without an account. Check the map and open a result to read its available description, photos and comments. Coverage and detail vary, so an empty result list does not prove that there are no toilets in the area.</p><p>Select <strong>Bezpłatna</strong> for places recorded as free, <strong>Przewijak</strong> for baby changing, <strong>Woda</strong> for water, or <strong>Dla osób z niepełnosprawnościami</strong> for locations marked as accessible for disabled people. There are also <strong>Parking</strong> and <strong>Prysznic</strong> (<em>Shower</em>) filters. Several active filters must all match, so remove optional ones if they make the results too limited.</p><p>For a fuller explanation of the Polish controls, follow our <a href=\"/en/guides/how-to-use-chce-siku/\">English guide to using the app</a>. <a href=\"/en/download/\">Chcę Siku! is available for iPhone and Android</a>.</p>"
+      },
+      {
+        "heading": "Check fees and opening hours at the specific location",
+        "html": "<p>Do not assume every toilet is free or that one price applies throughout Poland. Check the listing, sign at the entrance or staff's instructions for that facility. If there is a fee, confirm the accepted payment method before relying on a card or a particular coin.</p><p>A toilet inside a café, attraction or other venue may have conditions of access. Ask whether you can use it without a purchase or ticket. A map pin is a starting point for finding a place, not a guarantee that you can enter.</p><p>Read the toilet's own hours where available. A building, park or station being open does not by itself confirm that its toilet is open. If no hours are recorded, ask for current information rather than assuming around-the-clock access.</p>"
+      },
+      {
+        "heading": "Use official local information alongside the app",
+        "html": "<p>A municipal website or local tourist information service can provide another source when a map record is incomplete. Search for the place you are visiting and <em>toalety publiczne</em>, meaning <em>public toilets</em>, then look for the city's official site. Check the date and the individual facility's details.</p><p>For a concrete example, <a href=\"https://go2warsaw.pl/en/accessible-warsaw/\">Warsaw's official tourist website</a> directs visitors to a city toilet map with accessibility, opening-hour and fee information. <a href=\"https://warszawa19115.pl/-/automatyczne-toalety-miejskie\">Warsaw's municipal contact service</a> also explains how to find toilets through its maps and the street signs labelled <em>Mapa WC</em>. These are Warsaw resources; they do not describe access rules in every Polish city.</p>"
+      },
+      {
+        "heading": "Travelling with a baby or specific access needs",
+        "html": "<p>A changing-table label does not tell you whether the room is accessible to every parent or carer, whether it needs a key or whether you can bring a pushchair inside. Ask those questions before walking to a place with little information. Our <a href=\"/en/guides/toilets-with-baby-changing-facilities/\">baby changing guide</a> offers a practical checklist.</p><p>Similarly, a general accessibility label does not confirm door width, transfer space, grab rails or the absence of steps along the whole route. State your specific requirements when asking a venue. A helpful question can be more precise than simply asking for an accessible toilet. See <a href=\"/en/guides/finding-accessible-toilets/\">our guide to checking accessible facilities</a>.</p>"
+      },
+      {
+        "heading": "Get to the entrance and help the next visitor",
+        "html": "<p>Tap <strong>Prowadź</strong> for the app's map and direction arrow. If you prefer a street-based walking route, use <strong>Otwórz w mapach</strong> to open the destination in a supported maps app. Check crossings and the final entrance yourself. Arrange mobile data before travelling and do not rely on the app as a fully offline guide.</p><p>After your visit, sign in to leave a factual review. An English note about the entrance, payment or a key can be helpful to another visitor, while confirmed facilities improve the listing itself. If the toilet is closed outside its normal hours, update those hours rather than reporting that the place no longer exists.</p><p>For preparation that applies beyond Poland, read <a href=\"/en/guides/finding-toilets-while-travelling/\">how to find a toilet in an unfamiliar city</a>.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Warsaw Tourist Office - Accessible Warsaw: public toilets",
+        "url": "https://go2warsaw.pl/en/accessible-warsaw/"
+      },
+      {
+        "title": "Warsaw 19115 - Municipal toilets and city toilet maps (in Polish)",
+        "url": "https://warszawa19115.pl/-/automatyczne-toalety-miejskie"
+      }
+    ]
+  }
+]

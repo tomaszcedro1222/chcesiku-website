@@ -11,7 +11,8 @@ import { fileURLToPath } from 'node:url';
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const ORIGIN = 'https://chcesiku.pl';
 const BASELINE = 'a8d0628';
-const PROTECTED = ['polecenie/link.mjs', '.well-known', 'analytics.js', '404.html', 'CNAME', '.github/workflows'];
+// Analytics was intentionally localized in Oct 2026; its consent behaviour has separate regression tests.
+const PROTECTED = ['polecenie/link.mjs', '.well-known', '404.html', 'CNAME', '.github/workflows'];
 const SKIP_DIRECTORIES = new Set(['.git', 'node_modules', 'test']);
 
 function filesUnder(directory) {
@@ -96,7 +97,8 @@ function schemaNodes(value) {
 
 const htmlFiles = filesUnder(ROOT).filter(file => file.endsWith('.html')).map(relative);
 const articles = htmlFiles.filter(file => /^poradnik\/[^/]+\/index\.html$/.test(file));
-const refreshedPages = ['index.html', 'pobierz/index.html', 'poradnik/index.html', ...articles];
+const englishPages = htmlFiles.filter(file => file.startsWith('en/'));
+const refreshedPages = ['index.html', 'pobierz/index.html', 'poradnik/index.html', ...articles, ...englishPages];
 
 test('exactly eight reviewed articles and editorial page are present', () => {
   assert.equal(articles.length, 8);
@@ -230,9 +232,9 @@ test('sitemap includes home, download, guide hub and every article, but no refer
   }
 });
 
-test('referral link code, domain associations, analytics, 404, domain and deployment workflow are unchanged', () => {
+test('referral link code, domain associations, 404, domain and deployment workflow are unchanged', () => {
   const baselineFiles = execFileSync('git', ['ls-tree', '-r', '--name-only', BASELINE, '--', ...PROTECTED], { cwd: ROOT, encoding: 'utf8' }).trim().split('\n');
-  assert.ok(baselineFiles.length >= 7, 'Expected protected files are absent from baseline commit');
+  assert.ok(baselineFiles.length >= 6, 'Expected protected files are absent from baseline commit');
   const currentFiles = PROTECTED.flatMap(file => {
     const fullPath = path.join(ROOT, file);
     return existsSync(fullPath) && statSync(fullPath).isDirectory() ? filesUnder(fullPath).map(relative) : existsSync(fullPath) ? [file] : [];

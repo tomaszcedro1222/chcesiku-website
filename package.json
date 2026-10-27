@@ -5,7 +5,8 @@
   "scripts": {
     "build": "node scripts/build-site.mjs",
     "build:social": "node scripts/render-social.cjs",
-    "test": "node --test test/site.test.mjs"
+    "build:social:en": "node scripts/render-social-en.cjs",
+    "test": "node --test test/*.test.mjs"
   },
   "devDependencies": { "sharp": "0.35.5" }
 }
