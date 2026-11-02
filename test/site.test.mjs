@@ -135,11 +135,17 @@ test('referral preview uses the brand logo without changing the referral page fl
   assert.equal(wide.readUInt32BE(20), 630);
 });
 
-test('help and legal text are unchanged and shared shell has a single skip link', () => {
+test('help and legal text are preserved apart from the subscription disclosure', () => {
   for (const file of ['privacy.html','support.html','delete-account.html']) {
     const previous=execFileSync('git',['show',`${BASELINE}:${file}`],{cwd:ROOT,encoding:'utf8'});
     const main=html=>html.match(/<main[^>]*>([\s\S]*?)<\/main>/)?.[1];
-    assert.equal(main(read(file)),main(previous), `${file}: legal/help text changed`);
+    const withoutSubscriptionDisclosure = html => html
+      .replace('Obowiązuje od 2 listopada 2026 r.', 'Obowiązuje od 23 września 2026 r.')
+      .replace(/        <h3>Opcjonalne subskrypcje bez reklam<\/h3>\n(?:        <p>[^\n]*<\/p>\n){2}/, '')
+      .replace('bezpieczeństwo platformy, obsługa systemowych uprawnień oraz płatności i weryfikacja subskrypcji;', 'bezpieczeństwo platformy oraz obsługa systemowych uprawnień;')
+      .replace(/          <li>dane subskrypcji - [^\n]*<\/li>\n/, '');
+    const current = file === 'privacy.html' ? withoutSubscriptionDisclosure(read(file)) : read(file);
+    assert.equal(main(current),main(previous), `${file}: unrelated legal/help text changed`);
     assert.equal((read(file).match(/class="skip-link"/g)||[]).length,1);
   }
 });
