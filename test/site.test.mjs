@@ -135,7 +135,7 @@ test('referral preview uses the brand logo without changing the referral page fl
   assert.equal(wide.readUInt32BE(20), 630);
 });
 
-test('help and legal text are preserved apart from the subscription disclosure', () => {
+test('help and legal text are preserved outside subscription and advertising disclosures', () => {
   for (const file of ['privacy.html','support.html','delete-account.html']) {
     const previous=execFileSync('git',['show',`${BASELINE}:${file}`],{cwd:ROOT,encoding:'utf8'});
     const main=html=>html.match(/<main[^>]*>([\s\S]*?)<\/main>/)?.[1];
@@ -144,8 +144,16 @@ test('help and legal text are preserved apart from the subscription disclosure',
       .replace(/        <h3>Opcjonalne subskrypcje bez reklam<\/h3>\n(?:        <p>[^\n]*<\/p>\n){2}/, '')
       .replace('bezpieczeństwo platformy, obsługa systemowych uprawnień oraz płatności i weryfikacja subskrypcji;', 'bezpieczeństwo platformy oraz obsługa systemowych uprawnień;')
       .replace(/          <li>dane subskrypcji - [^\n]*<\/li>\n/, '');
-    const current = file === 'privacy.html' ? withoutSubscriptionDisclosure(read(file)) : read(file);
-    assert.equal(main(current),main(previous), `${file}: unrelated legal/help text changed`);
+    const withoutAdvertisingDisclosure = html => html
+      .replace(/Obowiązuje od [^<]+/, 'POLICY_DATE')
+      .replace(/Może wyświetlać[\s\S]*?(?=Do żądania reklamy)/, 'AD_SUMMARY ')
+      .replace(/<h3 id="reklamy">[\s\S]*?(?=<h2 id="cele">)/, 'AD_SECTION ')
+      .replace(/\s*<li><strong>Wyświetlanie (?:niespersonalizowanych banerów|reklam i opcjonalna personalizacja)<\/strong>[^<]*<\/li>/, '')
+      .replace(/\s*<li><strong>Google AdMob i Google User Messaging Platform<\/strong>[^<]*<\/li>/, '');
+    const normalize = html => file === 'privacy.html'
+      ? withoutAdvertisingDisclosure(withoutSubscriptionDisclosure(html))
+      : html;
+    assert.equal(main(normalize(read(file))),main(normalize(previous)), `${file}: unrelated legal/help text changed`);
     assert.equal((read(file).match(/class="skip-link"/g)||[]).length,1);
   }
 });
