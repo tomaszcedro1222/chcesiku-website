@@ -118,7 +118,11 @@ test('referral parser preserves valid codes and rejects malformed links without 
 test('referral preview uses the brand logo without changing the referral page flow', () => {
   const html = read('polecenie/index.html');
   const original = execFileSync('git', ['show', `${BASELINE}:polecenie/index.html`], { cwd: ROOT, encoding: 'utf8' });
-  assert.equal(html.slice(html.indexOf('<body>')), original.slice(original.indexOf('<body>')));
+  const expectedBody = original.slice(original.indexOf('<body>'))
+    .replace('Konto jest opcjonalne.', 'Z aplikacji możesz korzystać bez konta. Odbiór nagrody wymaga zalogowania.')
+    .replace('Pobierz i otwórz aplikację na telefonie.', 'Jeśli nie masz aplikacji, pobierz ją. Otwórz aplikację na telefonie i zaloguj się.')
+    .replace('      <p class="note">Samo pobranie', '      <p class="note">Polecenie można odebrać tylko raz na konto. Osoba, która wygenerowała już własny link polecający, nie może odebrać cudzego polecenia.</p>\n      <p class="note">Samo pobranie');
+  assert.equal(html.slice(html.indexOf('<body>')), expectedBody);
   const metas = metadata(html);
   const image = values(metas, 'og:image')[0];
   assert.equal(image, `${ORIGIN}/assets/social/referral-20261022-square.png`);
