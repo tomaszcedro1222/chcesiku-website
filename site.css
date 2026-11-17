@@ -121,9 +121,9 @@ a,button {
 .brand img {
   display:block;
   width:38px;
-  height:42px;
+  height:38px;
   object-fit:cover;
-  border-radius:10px
+  border-radius:23%
 }
 .nav-links {
   display:flex;
@@ -1137,7 +1137,7 @@ a,button {
   }
   .brand img {
     width:32px;
-    height:36px
+    height:32px
   }
 }
 @media(max-width:480px) {
