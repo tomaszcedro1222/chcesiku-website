@@ -35,3 +35,9 @@ Po wdrożeniu sprawdzić prawdziwą wiadomość potwierdzającą oraz odbiór mi
 - Wygasły lub nieprawidłowy token nie przyznaje nagrody na konto poprzednio zalogowane w tej przeglądarce. Użytkownik może jawnie zalogować się i dokończyć odbiór.
 - 51 testów Node zaliczonych, w tym trzy testy pełnego kontrolera na atrapie Auth: nowe urządzenie, wygasły token przy starej sesji oraz nieprawidłowy token. Lokalny podgląd potwierdził ekran i przyciski sklepów. To nadal nie dowodzi prawdziwego naliczenia nagrody.
 - Szablon, kopia poprzedniej treści i test Go są w oddzielnym repozytorium aplikacji. Pełny test lokalny obejmuje 6 przypadków i potwierdza bajtową zgodność wiadomości mobilnych. Nie publikować plików szablonów ani lokalnej atrapy z repozytorium strony.
+
+## Potwierdzony test rzeczywisty - 17.11.2026
+
+Właściciel potwierdził, że po otwarciu nowego e-maila na telefonie, bez ponownego logowania, zobaczył gratulacje i przycisk pobrania. Odczyt produkcji przez Supabase MCP potwierdził jeden odbiór platformy `web`, zapisany 17.11.2026 o 16:55:09 UTC: potwierdzony e-mail odbiorcy, nagroda 1 miesiąca i 10 punktów dla nadawcy. Uprawnienie odbiorcy jest zgodne z zapisem nagrody i trwa do 17.12.2026, a okres nadawcy został przedłużony do 22.12.2026. Odczyt nie zmieniał danych. Nie jest to test późniejszego zalogowania w aplikacji mobilnej ani test podwójnego użycia rzeczywistego linku; te rozróżniamy od wcześniejszych testów bazy.
+
+Opublikowana poprawka strony: `8e11ae6579ebf1783553d97cc8fd048430d228a1`, GitHub Pages run 44130000493, success. Niniejszy wpis zapisuje wynik testu lokalnie; sam nie oznacza kolejnej publikacji strony.
