@@ -12,7 +12,7 @@
 <meta property="og:locale:alternate" content="en_GB">
 </head>
 <body>
-  <a class="skip-link" href="#main">Przejdź do treści</a><header class="site-header"><nav class="nav wrap" aria-label="Główna nawigacja"><a class="brand" href="/"><img src="/assets/chce-siku-logo.jpg" alt="" width="38" height="42"><span>Chcę Siku!</span></a><div class="nav-links"><a href="/#jak-dziala">Jak działa</a><a href="/poradnik/">Poradnik</a><a class="optional-nav" href="/support.html">Pomoc</a><a class="nav-important" href="/pobierz/">Pobierz</a><a class="language-switch" href="/en/privacy/" lang="en" hreflang="en" aria-label="Read this page in English">EN<span class="language-name"> / English</span></a></div></nav></header>
+  <a class="skip-link" href="#main">Przejdź do treści</a><header class="site-header"><nav class="nav wrap" aria-label="Główna nawigacja"><a class="brand" href="/"><img src="/assets/chce-siku-logo.jpg" alt="" width="38" height="42"><span>Chcę Siku!</span></a><div class="nav-links"><a href="/#jak-dziala">Jak działa</a><a href="/poradnik/">Poradnik</a><a class="optional-nav" href="/support.html">Pomoc</a><a class="nav-important" href="/pobierz/">Pobierz</a><a href="/konto/">Zaloguj się</a><a class="language-switch" href="/en/privacy/" lang="en" hreflang="en" aria-label="Read this page in English">EN<span class="language-name"> / English</span></a></div></nav></header>
   <main id="main">
     <header class="legal-hero"><div class="wrap"><span class="eyebrow">Obowiązuje od 5 listopada 2026 r.</span><h1>Polityka prywatności</h1><p class="lead">Wyjaśniamy, jakie dane przetwarza aplikacja i witryna Chcę Siku!, po co są potrzebne i jakie masz prawa.</p></div></header>
     <div class="legal-layout wrap">
@@ -41,6 +41,11 @@
         <h3>Dane techniczne</h3>
         <p>Usługodawcy infrastruktury mogą przetwarzać typowe dane połączenia, takie jak adres IP, kraj ustalony na poziomie sieci, znaczniki czasu, informacje o żądaniu, wersji systemu, przeglądarce lub błędzie, w zakresie potrzebnym do bezpieczeństwa, działania i diagnozowania usługi. Dotyczy to również technicznych logów Supabase i jego dostawców sieciowych.</p>
 
+        <!-- web-account-disclosure:start -->
+        <h3>Konto i odbiór poleceń na stronie</h3>
+        <p>Na stronie możesz zalogować się lub zarejestrować na tym samym koncie co w aplikacji. Supabase obsługuje adres e-mail, hasło, nazwę użytkownika, potwierdzenie adresu oraz sesję logowania. Sesja jest zapisywana lokalnie w przeglądarce, aby umożliwić dalsze korzystanie z konta; możesz ją zakończyć przez wylogowanie.</p>
+        <p>Oczekujący kod polecenia zapisujemy w przeglądarce na maksymalnie 7 dni lub do rozstrzygnięcia odbioru. Kod może również znaleźć się w adresie powrotu po potwierdzeniu e-maila. Po zalogowaniu na potwierdzone konto serwer zapisuje powiązanie konta odbiorcy z polecającym, czas i kanał odbioru oraz przyznane punkty i okresy bez reklam. Odbiór jest jednorazowy na konto. Do ograniczania nadużyć wykorzystujemy serwerowy skrót adresu sieciowego; nie zapisujemy surowego adresu IP w rejestrze nagród. Dane techniczne połączenia mogą występować w logach dostawców opisanych poniżej. Formularze konta i poleceń nie uruchamiają dodatkowej analityki reklamowej.</p>
+        <!-- web-account-disclosure:end -->
         <h2 id="analityka">3. Zbiorczy licznik uruchomień i analityka</h2>
         <h3>Zbiorczy pomiar udanych uruchomień online</h3>
         <p>Przy pierwszym wejściu do głównej części aplikacji pobieramy z naszego backendu aktualną konfigurację potrzebną do prawidłowego wyświetlania formularzy i filtrów. To samo funkcjonalne żądanie zwiększa wyłącznie dzienną, łączną sumę udanych uruchomień online. Nie wysyłamy dodatkowego żądania analitycznego.</p>
