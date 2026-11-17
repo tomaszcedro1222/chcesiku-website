@@ -1,5 +1,5 @@
 import {config} from './config.mjs';
-import {pendingReferral, confirmationUrl, ReferralRedemption, messages, terminalStatuses, validCode} from './referral-flow.mjs';
+import {pendingReferral, emailConfirmation, emailReturnReferral, cleanConfirmationUrl, confirmationUrl, confirmationPresentation, confirmationSignInMessage, ReferralRedemption, messages, terminalStatuses, validCode} from './referral-flow.mjs';
 
 const $ = id => document.getElementById(id);
 const pendingKey = 'chcesiku.pending-web-referral.v1';
@@ -8,12 +8,29 @@ const storage = {
   save(code) { try { localStorage.setItem(pendingKey, JSON.stringify({code, savedAt:Date.now()})); } catch { /* The confirmation URL also carries the invitation. */ } },
   clear(code) { try { if (this.read() === code) localStorage.removeItem(pendingKey); } catch {} },
 };
-let invitation = pendingReferral(location.href, storage.read());
+const confirmationPage = document.body.dataset.confirmation === 'true';
+const hasEmailToken = confirmationPage && new URLSearchParams(location.hash.slice(1)).has('token_hash');
+const emailToken = confirmationPage ? emailConfirmation(location.href) : null;
+let invitation = confirmationPage ? emailReturnReferral(location.href, storage.read()) : pendingReferral(location.href, storage.read());
 if (invitation) storage.save(invitation);
-let mode = 'login', session = null, generation = 0, busy = false, confirmationEmail = null, recovering = false;
+// Consume one-time email tokens in memory, then remove them before any other navigation.
+if (hasEmailToken) {
+  const clean = cleanConfirmationUrl(location.href); if (invitation) clean.searchParams.set('ref', invitation);
+  history.replaceState(null, '', clean);
+}
+let mode = 'login', session = null, generation = 0, busy = hasEmailToken, confirmationEmail = null, recovering = false;
+let acceptAuthEvents = !hasEmailToken;
 const localPreview = ['127.0.0.1','localhost'].includes(location.hostname) && new URL(config.supabaseUrl).hostname !== location.hostname;
 const previewMessage = 'Podgląd lokalny. Formularz nie wysyła tutaj danych konta; odbiór nagród wymaga zatwierdzonego wdrożenia.';
 const status = (text, kind = '') => { $('status').textContent = text; $('status').className = `status ${kind}`; $('status').hidden = !text; };
+function renderConfirmation(user, result) {
+  if (!confirmationPage) return;
+  const view = confirmationPresentation({user, hasInvitation:!!invitation, result, recovering});
+  $('page-title').textContent = view.title; $('page-intro').textContent = view.intro;
+  $('confirmed-reward').textContent = view.reward ?? ''; $('confirmed-reward').hidden = !view.reward;
+  $('form-title').hidden = !!view.reward; $('download-intro').hidden = !!view.reward;
+  $('download-title').textContent = view.reward ? 'Pobierz aplikację i korzystaj bez reklam' : 'Teraz pobierz aplikację';
+}
 function setMode(next) {
   mode = next; $('form-title').textContent = ({login:'Zaloguj się', register:'Załóż konto', recovery:'Ustaw nowe hasło'})[mode];
   $('tab-login').setAttribute('aria-pressed', mode === 'login'); $('tab-register').setAttribute('aria-pressed', mode === 'register');
@@ -42,6 +59,8 @@ if (!client) {
     const signedIn = !!session && !recovering;
     $('auth-form').hidden = signedIn; $('auth-tabs').hidden = signedIn || recovering; $('signed-in').hidden = !signedIn;
     $('confirmation').hidden = true; $('retry').hidden = true;
+    $('benefit').textContent = '';
+    renderConfirmation(signedIn ? session.user : null, 'pending');
     if (!signedIn) { $('download').hidden = true; return; }
     const user = session.user;
     $('form-title').textContent = invitation ? 'Twoje polecenie' : 'Twoje konto'; $('account-email').textContent = user.email ?? '';
@@ -51,13 +70,15 @@ if (!client) {
       try {
         const result = await flow.run(user, invitation);
         if (!userStillCurrent(user.id, currentGeneration)) return;
-        status(messages[result] ?? 'Nie udało się teraz potwierdzić polecenia.', result === 'accepted' ? 'success' : '');
+        renderConfirmation(user, result);
+        status(confirmationPage && result === 'accepted' ? 'Polecenie zostało zaliczone.' : messages[result] ?? 'Nie udało się teraz potwierdzić polecenia.', result === 'accepted' ? 'success' : '');
         $('retry').hidden = terminalStatuses.has(result) || result === 'email_confirmation_required';
       } catch {
         if (!userStillCurrent(user.id, currentGeneration)) return;
+        renderConfirmation(user, 'retry_later');
         status('Nie udało się połączyć z serwerem poleceń. Zaproszenie pozostaje zapisane. Spróbuj ponownie.', 'error'); $('retry').hidden = false;
       }
-    } else status('Zalogowano. Możesz teraz pobrać aplikację.', 'success');
+    } else { renderConfirmation(user); status('Zalogowano. Możesz teraz pobrać aplikację.', 'success'); }
     try {
       const {data,error} = await client.rpc('get_my_referral_state');
       if (error || !userStillCurrent(user.id, currentGeneration)) return;
@@ -66,6 +87,7 @@ if (!client) {
     } catch { /* A status read must never pretend to grant a reward. */ }
   }
   client.auth.onAuthStateChange((event, nextSession) => {
+    if (busy || !acceptAuthEvents) return;
     if (event === 'PASSWORD_RECOVERY') { recovering = true; setMode('recovery'); }
     // Supabase calls must run after its auth callback releases the session lock.
     setTimeout(() => { if (!busy) void renderSession(nextSession); }, 0);
@@ -81,7 +103,7 @@ if (!client) {
         const {data,error} = await client.auth.signUp({email,password,options:{emailRedirectTo:confirmationUrl(location.origin, invitation),data:{display_name:$('display-name').value.trim()}}});
         if (error) throw error;
         $('password').value = '';
-        if (data.session) { setBusy(false); await renderSession(data.session); }
+        if (data.session) { acceptAuthEvents = true; setBusy(false); await renderSession(data.session); }
         else {
           confirmationEmail = email; $('auth-form').hidden = true; $('auth-tabs').hidden = true; $('confirmation').hidden = false; $('download').hidden = false; $('form-title').textContent = 'Sprawdź swoją pocztę';
           status('Konto zgłoszone do rejestracji. Polecenie zaliczymy po potwierdzeniu adresu e-mail i zalogowaniu.', '');
@@ -92,7 +114,7 @@ if (!client) {
         const {data} = await client.auth.getSession(); await renderSession(data.session);
       } else {
         const {data,error} = await client.auth.signInWithPassword({email,password}); if (error) throw error;
-        $('password').value = ''; setBusy(false); await renderSession(data.session);
+        acceptAuthEvents = true; $('password').value = ''; setBusy(false); await renderSession(data.session);
       }
     } catch (error) {
       const code = error?.code;
@@ -125,7 +147,26 @@ if (!client) {
   if (document.body.dataset.referral === 'true' && !invitation) {
     status('Ten link zaproszenia jest niepełny. Poproś o przesłanie oryginalnego linku.', 'error'); setBusy(true);
   } else {
-    try { const {data,error} = await client.auth.getSession(); if (error) throw error; await renderSession(data.session); if (localPreview) status(previewMessage); }
-    catch { status('Nie udało się odczytać sesji. Zaloguj się ponownie.', 'error'); }
+    try {
+      // Initialization errors (e.g. missing PKCE verifier in another browser) must not disappear in getSession().
+      const initialization = await client.auth.initialize();
+      // A one-time verification link works on a different device without the original PKCE verifier.
+      if (hasEmailToken) {
+        if (!emailToken) throw new Error('Invalid confirmation link');
+        setBusy(true); status('Potwierdzamy adres e-mail…');
+        const {data,error} = await client.auth.verifyOtp(emailToken);
+        if (error || !data.session) throw error ?? new Error('Missing confirmed session');
+        acceptAuthEvents = true; setBusy(false); await renderSession(data.session);
+      } else {
+        const {data,error} = await client.auth.getSession(); if (error) throw error;
+        await renderSession(data.session);
+        if (confirmationPage && !data.session && !recovering) status(confirmationSignInMessage(initialization.error));
+      }
+      if (localPreview) status(previewMessage);
+    }
+    catch {
+      setBusy(false); await renderSession(null);
+      status(hasEmailToken ? 'Link potwierdzający wygasł lub jest nieprawidłowy. Jeśli konto jest potwierdzone, zaloguj się poniżej - dokończymy odbiór polecenia.' : confirmationPage ? confirmationSignInMessage() : 'Nie udało się odczytać sesji. Zaloguj się ponownie.', 'error');
+    }
   }
 }
